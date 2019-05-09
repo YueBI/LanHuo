@@ -1,0 +1,37 @@
+{
+  "list":[
+       {
+          "trajectoryID":"001",
+          "userID":"001",
+          "startTime":1556248505,
+          "endTime":1556248505,
+          "trajectoryType":0,
+          "trajectorySrc":"../static/json/indoor.json"
+        },
+        {
+          "trajectoryID":"002",
+          "userID":"001",
+          "startTime":1556248505,
+          "endTime":1556248505,
+          "trajectoryType":0,
+          "trajectorySrc":"./indoor.json"
+        },
+        {
+          "trajectoryID":"003",
+          "userID":"002",
+          "startTime":1556248505,
+          "endTime":1556248505,
+          "trajectoryType":0,
+          "trajectorySrc":"./indoor.json"
+        },
+        {
+          "trajectoryID":"004",
+          "userID":"002",
+          "startTime":1556248505,
+          "endTime":1556248505,
+          "trajectoryType":0,
+          "trajectorySrc":"./indoor.json"
+        }
+    ]
+}
+  

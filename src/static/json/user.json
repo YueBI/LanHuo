@@ -1,0 +1,46 @@
+{
+  "list":
+     [
+       {
+          "mapID":"001",
+          "userID":"001",
+          "userName":"ADMIN"
+       },
+       {
+          "mapID":"001",
+          "userID":"002",
+          "userName":"boss"
+       },
+       {
+          "mapID":"001",
+          "userID":"003",
+          "userName":"boss"
+       },
+       {
+          "mapID":"001",
+          "userID":"004",
+          "userName":"boss"
+       },
+       {
+          "mapID":"002",
+          "userID":"005",
+          "userName":"boss"
+       },
+       {
+          "mapID":"002",
+          "userID":"006",
+          "userName":"boss"
+       },
+       {
+          "mapID":"002",
+          "userID":"007",
+          "userName":"boss"
+       },
+       {
+          "mapID":"002",
+          "userID":"008",
+          "userName":"boss"
+       }
+    ]
+}
+  

@@ -1,0 +1,16 @@
+{
+"userSimilarity":0.9,
+"trajectory":[
+	{
+    "trajectoryAID":"001",
+    "trajectoryBID":"003",
+    "similarity":0.333
+  },
+  {
+    "trajectoryAID":"002",
+    "trajectoryBID":"004",
+    "similarity":0.333
+  }
+  
+]
+}
