@@ -23,17 +23,23 @@
       <el-col :span="2">
         <el-button @click.native="init()">取消</el-button>
       </el-col>
-    </el-row> -->
+    </el-row>-->
     <el-row>
-      <el-col :span="18">
-        <div id="container"></div>
+      <el-col :span="16">
+        <div id="container" style="width:800px; height:500px"></div>
       </el-col>
-      <el-col :span="6">
+      <el-col :span="7">
         <div>
-          <el-table :data="tableData" border style="width:300px" height="calc(100vh)">
-            <el-table-column fixed prop="rank" label="排名" width="100"></el-table-column>
+          <el-table
+            :data="tableData"
+            border
+            style="width:300px"
+            height="500px"
+            :default-sort="{prop: 'integererestValue', order: 'descending'}"
+          >
+            <el-table-column type="index" label="排名" width="50"></el-table-column>
             <el-table-column prop="integererestValue" label="兴趣度"></el-table-column>
-           <el-table-column label="操作">
+            <el-table-column label="操作">
               <template slot-scope="scope">
                 <el-button size="mini" @click="addMarker(scope.$index)">查看位置</el-button>
               </template>
@@ -58,9 +64,10 @@ export default {
         center: [116.397428, 39.90923],
         resizeEnable: true,
         zoom: 10,
-        mapStyle: "amap://styles/macaron"
+        mapStyle: "amap://styles/normal"
       });
     },
+
     getPage() {
       axios
         .post(
@@ -76,6 +83,7 @@ export default {
           console.log(response.data);
           this.list = response.data.content.integererestValue;
           for (var i = 0; i < this.list.length; i++) {
+            this.list[i].integererestValue=(parseFloat(this.list[i].integererestValue)).toFixed(2)*100;
             this.tableData.push({
               rank: i + 1,
               integererestValue: this.list[i].integererestValue
@@ -87,17 +95,24 @@ export default {
           console.log(error);
         });
     },
-    addMarker(index){
-      this.init();
-       var marker = new AMap.Marker({
+    addMarker(index) {
+      map = new AMap.Map("container", {
+        center: [this.list[index].longitude, this.list[index].latitude],
+        resizeEnable: true,
+        zoom: 14,
+        mapStyle: "amap://styles/normal"
+      });
+      var marker = new AMap.Marker({
         position: new AMap.LngLat(
           this.list[index].longitude,
           this.list[index].latitude
-        ),
-        icon: "//vdata.amap.com/icons/b18/1/2.png"
+        )
       });
+      marker.setAnimation("AMAP_ANIMATION_BOUNCE");
       map.add(marker);
-
+      AMap.event.addListener(marker, "click", function() {
+        infoWindow.open(map, marker.getPosition());
+      });
     }
   },
 
@@ -108,15 +123,13 @@ export default {
       tableData: [],
       list: [],
       markerlatitude: [],
-      markerlongitude:[]
+      markerlongitude: []
     };
   }
 };
 </script>
 <style>
 .el-row {
+  margin-bottom: 20px;
 }
-    #container{
-        height: calc(100vh);
-    }
 </style>

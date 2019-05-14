@@ -206,27 +206,25 @@ export const constantRoutes = [
         meta: { title: '主页' }
       },
       {
+        path: 'realTimeTrack',
+        component: () => import('@/views/nested/realTimeTracking/index'),
+        meta: { title: '实时追踪' }
+      },
+      {
         name: 'fenceCreateInfo', // 围栏创建填写具体信息
         path: '/fenceCreateInfo',
         component: () => import('@/views/nested/fenceCreate/fenceCreateInfo')
       },
       {
-        path: 'createFence',
-        component: () => import('@/views/nested/menu1/index'), // Parent router-view
-        name: 'Menu1',
-        meta: { title: '创建电子围栏' },
-        children: [
-          {
-            path: 'fenceOut',
-            component: () => import('@/views/nested/fenceCreate/fenceOutCreate/index'),
-            meta: { title: '室外电子围栏' }
-          },
-          {
-            path: 'fenceIn',
-            component: () => import('@/views/nested/fenceCreate/fenceInCreate/index'),
-            meta: { title: '室内电子围栏' }
-          }
-        ]
+        path: 'fenceOut',
+        name: 'fenceOut',
+        meta: { title: '室外电子围栏' },
+        component: () => import('@/views/nested/fenceCreate/fenceOutCreate/index')
+      },
+      {
+        path: 'fenceIn',
+        component: () => import('@/views/nested/fenceCreate/fenceInCreate/index'),
+        meta: { title: '室内电子围栏' }
       },
       {
         path: 'fenceMana',

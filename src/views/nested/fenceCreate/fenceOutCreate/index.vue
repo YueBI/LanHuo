@@ -2,30 +2,26 @@
   <div>
     <!--表格数据-->
     <div class="row">
-      <div style="width: 100%">
+        <div style="dashed #000;width: 100px">
+            <div style="dashed #000; display: flex;flex-flow: row">
+                <div style="margin-left:10px;text-align:center;">工具栏</div>
+                <div style="margin-left:10px;margin-top:5px;text-align:center;font-size:30px" @click="draw('point')"><i class="fa fa-hand-o-up fa-lg" /></div>
+                <div style="margin-left:2px;margin-top:35px;text-align:center;font-size:30px" @click="draw('circle')"><i class="fa fa-circle-thin fa-lg" /></div>
+                <div class="" style="margin-left:2px;margin-top:35px;text-align:center;font-size:30px" @click="draw('clear')"><i class="fa fa-close fa-lg" /></div>
+                <el-button style="width:150px;margin-top:20px;" @click="fenceCreate()">创建电子围栏</el-button>
+            </div>
+        </div>
+      <div>
         <baidu-map class="map" :scroll-wheel-zoom="true" :center="{lng: 116.404, lat: 39.915}" :zoom="14" @click="selectPoint">
           <bm-marker v-if="pointShow" :position="{lng: this.fenceShape[0], lat: this.fenceShape[1]}" :dragging="true" />
           <!-- <bm-polygon v-if=polygonShow :path="polygonPath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolygonPath" @dblclick="sendPath"/> -->
           <bm-circle v-if="circleShow" :center="circlePath.center" :radius="circlePath.radius" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updateCirclePath" @dblclick="sendPath" />
         </baidu-map>
-        <!-- <div id="allmap" class="map" style="overflow:hidden;zoom:1;position:relative;">
-              <div id="map" ref="map" style="height:100%;-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;"></div>
-            </div> -->
       </div>
-      <div style="border:1px;dashed #000">
-        <div style="border:10px;dashed #000">
-          <div style="margin-left:2px;text-align:center;font-size:20px">工具栏</div>
-          <div style="margin-left:2px;margin-top:35px;text-align:center;font-size:30px" @click="draw('point')"><i class="fa fa-hand-o-up fa-lg" /></div>
-          <div style="margin-left:2px;margin-top:35px;text-align:center;font-size:30px" @click="draw('circle')"><i class="fa fa-circle-thin fa-lg" /></div>
-          <!-- <div style="margin-left:2px;margin-top:35px;text-align:center;font-size:30px"  @click="draw('polygon')"><i class="fa fa-square-o fa-lg"></i></div> -->
-          <!-- <div class="" style="margin-left:2px;margin-top:30px;text-align:center;font-size:30px"><i class="fa fa-eye fa-lg"></i></div> -->
-          <div class="" style="margin-left:2px;margin-top:35px;text-align:center;font-size:30px" @click="draw('clear')"><i class="fa fa-close fa-lg" /></div>
-        </div>
-      </div>
-    </div>*/
+    </div>
     <!-- 表格下方分页 -->
     <el-row>
-      <el-button type="primary" style="width:300px;margin-top:20px;margin-left:500px;" @click="fenceCreate()">创建电子围栏</el-button>
+
     </el-row>
   </div>
 </template>
@@ -163,7 +159,7 @@ export default {
 }
 .map {
  width: 100%;
- height: 500px;
+ height: calc(100vh);
  /*overflow: hidden;
  zoom: 1;
   position: relative;
@@ -173,10 +169,10 @@ export default {
 .fontIcon {
  margin-left:2px;
  width: 50px;
- height: 50px;
+ height: 100%;
 }
     .row{
         display: flex;
-        flex-flow: row;
+        flex-flow: column;
     }
 </style>

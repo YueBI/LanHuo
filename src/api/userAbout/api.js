@@ -3,7 +3,7 @@ import axios from 'axios'
 // const baseUrl = 'http://10.210.70.164:8080'
 // const baseUrl = 'http://10.112.20.181:8080'
 // const baseUrl = 'http://10.112.10.121:8080'
-const baseUrl = 'http://10.28.145.141:8080'
+const baseUrl = 'http://http://112.74.189.126:8080'
 const instance = axios.create()
 instance.defaults.timeout = 6000
 instance.interceptors.request.use((config) => {
