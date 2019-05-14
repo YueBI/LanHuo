@@ -31,6 +31,10 @@ export default {
   queryIndoorMap(){
     return fetch(`${baseUrl}/bluefire/Integererface/data_manage/queryIndoorMap`)
   },
+  // 通过id获取室内地图的链接
+  queryMapByMapId(params){
+    return fetch(`${baseUrl}/bluefire/Integererface/data_manage/queryMapByMapId`, params)
+  },
   // 获取室内用户列表
   getIndoorUsers(params){
     return fetch(`${baseUrl}/bluefire/Integererface/data_manage/getIndoorUsers`, params)
@@ -41,10 +45,26 @@ export default {
   },
   // 获取室内用户相似度
   getIndoorSimilarity(params){
-    return fetch(`${baseUrl}/bluefire/Integererface/analyse/getIndoorSimilarity`, params)
+    return fetch(`${baseUrl}/bluefire/Integererface/analysis/getIndoorSimilarity`, params)
   },
   // 获取室内轨迹信息
   getIndoorTrajectories(params){
     return fetch(`${baseUrl}/bluefire/Integererface/data_manage/getIndoorTrajectories`, params)
-  }
+  },
+  // 获取室外用户列表
+  getOutdoorUsers(){
+    return fetch(`${baseUrl}/bluefire/Integererface/data_manage/getOutdoorUsers`)
+  },
+  // 获取用户室外轨迹列表信息
+  getOutdoorTrajectories(params){
+    return fetch(`${baseUrl}/bluefire/Integererface/data_manage/getOutdoorTrajectories`, params)
+  },
+  // 获取室外轨迹详情
+  getOutdoorTrajectoryDetail(params){
+    return fetch(`${baseUrl}/bluefire/Integererface/data_manage/getOutdoorTrajectoryDetail`, params)
+  },
+  // 获取室外用户相似度
+  getOutdoorSimilarity(params){
+    return fetch(`${baseUrl}/bluefire/Integererface/analysis/getOutdoorSimilarity`, params)
+  },
 }

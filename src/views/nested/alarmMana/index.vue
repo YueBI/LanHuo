@@ -2,10 +2,6 @@
    <div style="height:100%;">
       <div class='header-title'>
         <!-- sidebar以外的主屏幕中的“路径”的点击跳转 -->
-        <el-breadcrumb separator-class="el-icon-arrow-right">
-          <el-breadcrumb-item :to="{ path: '/AlarmMana' }">报警管理</el-breadcrumb-item>
-          <el-breadcrumb-item></el-breadcrumb-item>
-        </el-breadcrumb>
       </div>
       <!--数据筛选条件+按钮-->
       <el-row class='subjectMana filterForm' v-bind:style="{width: tableWidth + 'px'}">

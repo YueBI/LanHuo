@@ -1,7 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1c9bfdf-1a04-474e-ba9a-9b265aa0d787" name="Default" comment="" />
+    <list default="true" id="a1c9bfdf-1a04-474e-ba9a-9b265aa0d787" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/@babel/register/.babel.7.0.0.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/@babel/register/.babel.7.0.0.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/02ce4ff9155a3d670ad831a15031b4ef.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/02ce4ff9155a3d670ad831a15031b4ef.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/050f88ea5232016d1b6b9b83e7cce480.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/050f88ea5232016d1b6b9b83e7cce480.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/15e7d95479423065e83b8dd5223924da.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/15e7d95479423065e83b8dd5223924da.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/1bdbebf5210409eda3fc775fee28e480.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/1bdbebf5210409eda3fc775fee28e480.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/1c6e5997bc88e613188d76a8bc706f32.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/1c6e5997bc88e613188d76a8bc706f32.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/1dafb2e604504821496c8c6248cda792.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/1dafb2e604504821496c8c6248cda792.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/2f087e7fd311536cdce4feb81e0aeabe.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/2f087e7fd311536cdce4feb81e0aeabe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/301f18c08e48871f0c3a81bb84424d76.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/301f18c08e48871f0c3a81bb84424d76.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/48b1e38f11a52cc926303dd5d061e398.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/48b1e38f11a52cc926303dd5d061e398.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/4d52107a1a05fedeebe3c26d57db941e.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/4d52107a1a05fedeebe3c26d57db941e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/6754e8f6d104a643805c3a44f95c7a42.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/6754e8f6d104a643805c3a44f95c7a42.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/8f51b4c118909a43d17c32f64892db88.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/8f51b4c118909a43d17c32f64892db88.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/a89bfaa3f24c543e4e646b4007e5de62.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/a89bfaa3f24c543e4e646b4007e5de62.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/c5949b3dc0d28653fb79d65485c49a69.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/c5949b3dc0d28653fb79d65485c49a69.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/df7c8ba7853615b9359d80049366fd26.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/df7c8ba7853615b9359d80049366fd26.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/06047955944cfa99cb3813b0359d54a9.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/06047955944cfa99cb3813b0359d54a9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/0cd865aeec307458824b65db3ad7bb85.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/0cd865aeec307458824b65db3ad7bb85.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/0d9cc13262c54ba6c6a47042e01afceb.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/0d9cc13262c54ba6c6a47042e01afceb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/13af7d8c3b9a66e3a3f9f91862499524.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/13af7d8c3b9a66e3a3f9f91862499524.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/192ae1a574edc2635cf9ecd9e028a3e3.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/192ae1a574edc2635cf9ecd9e028a3e3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/1bbedfd1dcb9c62fa8bbb085eaffff92.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/1bbedfd1dcb9c62fa8bbb085eaffff92.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/2491a514ce0c45c52e8a947e773d752f.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/2491a514ce0c45c52e8a947e773d752f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/2512752be83767e19b49e1fa80895b43.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/2512752be83767e19b49e1fa80895b43.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/299ec26e205eadec79e1866ee1b10d53.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/299ec26e205eadec79e1866ee1b10d53.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/29b9993e7981d7620fa3e23311b4cf7f.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/29b9993e7981d7620fa3e23311b4cf7f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/329c0009272bf9fa44b97688081c7df5.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/329c0009272bf9fa44b97688081c7df5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/354bdd09222dd26a0a559a3a03279ff3.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/354bdd09222dd26a0a559a3a03279ff3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/38dfadae13c1d17b590ef575b74450dd.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/38dfadae13c1d17b590ef575b74450dd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/3a4567d85008f38255ffbce20210ab22.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/3a4567d85008f38255ffbce20210ab22.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/3b27bbb87fed7492596efb9db30a7e66.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/3b27bbb87fed7492596efb9db30a7e66.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/3fcc1eb764f0138e1f4a96fe869b6d3a.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/3fcc1eb764f0138e1f4a96fe869b6d3a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/49befe681ffdeb8aec33ae23cd719298.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/49befe681ffdeb8aec33ae23cd719298.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/4d3f495eb91560f51c23c5109eb8ed6e.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/4d3f495eb91560f51c23c5109eb8ed6e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/5022652b1fb6c02d3baad78e58febe78.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/5022652b1fb6c02d3baad78e58febe78.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/5a68dfa6daa2c56e46c74bcf042ace47.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/5a68dfa6daa2c56e46c74bcf042ace47.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/5b23aa23a8496d3f7065233ff53e0965.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/5b23aa23a8496d3f7065233ff53e0965.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/5c6a16a0aaf6ef2b345888b5505d3691.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/5c6a16a0aaf6ef2b345888b5505d3691.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/5ea30334b3c8bfea5ac178306fd38ab3.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/5ea30334b3c8bfea5ac178306fd38ab3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/64daf0a6ff4aaa7939596d7ca7bb993f.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/64daf0a6ff4aaa7939596d7ca7bb993f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/6f5291a2d415d173f284737972b06aae.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/6f5291a2d415d173f284737972b06aae.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/71e8991c4a634922316e012354ae9103.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/71e8991c4a634922316e012354ae9103.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/748d613767147d2851da3ce8537abf9e.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/748d613767147d2851da3ce8537abf9e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/7561038a11f00b2440a4e5d027e64dea.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/7561038a11f00b2440a4e5d027e64dea.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/7734d04d90dbcf6bc7ac531bc5aa86a3.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/7734d04d90dbcf6bc7ac531bc5aa86a3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/91f8fe8b5259d0b0db27e83c175159d4.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/91f8fe8b5259d0b0db27e83c175159d4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/9a0fa4017678d0ff0d7102893220b28d.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/9a0fa4017678d0ff0d7102893220b28d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/9d852fd3fb90a309d080dc38acd7a800.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/9d852fd3fb90a309d080dc38acd7a800.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/9e0d3660f4625fc4cd7fe9b042f8d4a2.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/9e0d3660f4625fc4cd7fe9b042f8d4a2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/a0303f605a566c84ad546d6f33b5fb40.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/a0303f605a566c84ad546d6f33b5fb40.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/a48b52d1a5d581bf9e300cd86466f9b4.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/a48b52d1a5d581bf9e300cd86466f9b4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/a872da6e31d7eece4f883088b33b138e.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/a872da6e31d7eece4f883088b33b138e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/ab9a7140b75166f22fd8a4af481abb9d.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/ab9a7140b75166f22fd8a4af481abb9d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/afa6ffe55dbe2b1042c14c6009ccca3b.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/afa6ffe55dbe2b1042c14c6009ccca3b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/b6b88b60b24499c2b03332a4091aab75.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/b6b88b60b24499c2b03332a4091aab75.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/ba13726898bdbb7c36b3edeb0eefee6e.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/ba13726898bdbb7c36b3edeb0eefee6e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/bafa6d7097150f8a21469c7589f294ca.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/bafa6d7097150f8a21469c7589f294ca.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/bb811e45e60b7d6d37f4fd1365ee6753.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/bb811e45e60b7d6d37f4fd1365ee6753.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/bc0e6260e8e62cbc9dfea407cf019fa2.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/bc0e6260e8e62cbc9dfea407cf019fa2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/be7bcea63fb524a7ffe2aa779ada7a2e.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/be7bcea63fb524a7ffe2aa779ada7a2e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/c050752a94d3f6a519874fe190164c1d.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/c050752a94d3f6a519874fe190164c1d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/c22deec1f5309d62c2a6efe6e5e5ea7c.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/c22deec1f5309d62c2a6efe6e5e5ea7c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/c36c23a04a82eb1bc606d48d078ecd44.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/c36c23a04a82eb1bc606d48d078ecd44.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/c396add36964145f8f271a17dbb8c488.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/c396add36964145f8f271a17dbb8c488.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/c802e0f78e4d65c6ef6f747cfd0f8bff.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/c802e0f78e4d65c6ef6f747cfd0f8bff.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/c87be04b4bcbaef225493b061070606f.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/c87be04b4bcbaef225493b061070606f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/cabc835fd6d56e300442fdb3a1fdbea2.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/cabc835fd6d56e300442fdb3a1fdbea2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/cda82e40fe4220bebde540f236c46518.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/cda82e40fe4220bebde540f236c46518.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/cfd60fa0077f78c596ffd4e3c6b812ae.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/cfd60fa0077f78c596ffd4e3c6b812ae.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/da559bcde28fbdb5bad3600d39567664.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/da559bcde28fbdb5bad3600d39567664.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/dabcaee1d6b01c690d3e64aab93c79c7.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/dabcaee1d6b01c690d3e64aab93c79c7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/dad7e90d6249265638014eb74379691f.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/dad7e90d6249265638014eb74379691f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/def78e10f15f4196dd69df795c773ccb.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/def78e10f15f4196dd69df795c773ccb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/dfa8dafce2d90f8faadde74b251c7255.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/dfa8dafce2d90f8faadde74b251c7255.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/e230bb75dbec987892396b89f50c8200.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/e230bb75dbec987892396b89f50c8200.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/e2981a01c0963003517850f9eb687e6c.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/e2981a01c0963003517850f9eb687e6c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/e650056b26c08251bfe5d76a988a4418.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/e650056b26c08251bfe5d76a988a4418.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/ecf1906bb7ce1b5b1513ef18fd0025c5.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/ecf1906bb7ce1b5b1513ef18fd0025c5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/f0ba6e44eb0388c6eae991249f1aa328.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/f0ba6e44eb0388c6eae991249f1aa328.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/f7ed9a185db14095ce060a8ec80685f5.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/f7ed9a185db14095ce060a8ec80685f5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/fabbede6321ed3fef08648895710e0cc.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/fabbede6321ed3fef08648895710e0cc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/febb5277bb71177d22372ad881b8a19b.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/febb5277bb71177d22372ad881b8a19b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/similarity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/similarity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mock/similarity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mock/similarity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nested/alarmMana/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nested/alarmMana/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nested/deviceMana/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nested/deviceMana/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nested/elecSign/createElecSign/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nested/elecSign/createElecSign/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nested/elecSign/elecSignMana/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nested/elecSign/elecSignMana/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nested/elecSign/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nested/elecSign/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nested/fenceCreate/fenceCreateInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nested/fenceCreate/fenceCreateInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nested/fenceCreate/fenceOutCreate/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nested/fenceCreate/fenceOutCreate/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nested/fenceCreate/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nested/fenceCreate/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nested/fenceMana/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nested/fenceMana/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nested/homePage/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nested/homePage/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nested/menu1/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nested/menu1/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nested/sysMana/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nested/sysMana/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nested/userGroup/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nested/userGroup/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/zhangyilei/experienceshow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/zhangyilei/experienceshow.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/zhangyilei/trackforecast.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/zhangyilei/trackforecast.vue" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,62 +113,151 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="list.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/wenyu/list.vue">
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/nested/fenceCreate/fenceOutCreate/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#dib#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#el-row#1;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#style#0;n#el-button#0;n#el-row#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fenceCreateInfo.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/nested/fenceCreate/fenceCreateInfo.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/nested/fenceCreate/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/nested/fenceMana/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#el-select#0;n#el-form-item#0;n#el-form#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#el-input#0;n#el-form-item#1;n#el-form#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#el-row#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#el-row#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#el-input#0;n#el-form-item#0;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#el-input#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#el-select#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#el-select#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#el-select#0;n#el-form-item#4;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#el-input#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#el-button#0;n#el-form-item#7;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/router/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="83">
+              <caret line="247" column="57" lean-forward="true" selection-start-line="247" selection-start-column="57" selection-end-line="247" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/nested/menu1/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/table/index.vue">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="showTrack.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/wenyu/showTrack.vue">
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/nested/userGroup/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="305" column="2" selection-start-line="305" selection-start-column="2" selection-end-line="305" selection-end-column="2" />
-              <folding>
-                <element signature="n#style#0;n#el-button#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-button#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-button#2;n#div#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trackforecast.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/trackforecast.vue">
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/nested/sysMana/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1927">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-              <folding>
-                <element signature="n#style#0;n#el-table#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interestshow.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/interestshow.vue">
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/nested/fenceCreate/fenceInCreate/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-              <folding>
-                <element signature="n#style#0;n#el-table#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
+            <state relative-caret-position="-82" />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="experienceshow.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/experienceshow.vue">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/views/wenyu/showTrack.vue" />
-        <option value="$PROJECT_DIR$/src/views/zhangyilei/trackforecast.vue" />
         <option value="$PROJECT_DIR$/src/views/zhangyilei/interestshow.vue" />
+        <option value="$PROJECT_DIR$/src/views/zhangyilei/trackforecast.vue" />
+        <option value="$PROJECT_DIR$/src/views/zhangyilei/experienceshow.vue" />
+        <option value="$PROJECT_DIR$/src/views/dashboard/index.vue" />
+        <option value="$PROJECT_DIR$/src/views/nested/homePage/index.vue" />
+        <option value="$PROJECT_DIR$/src/views/nested/fenceCreate/fenceOutCreate/index.vue" />
+        <option value="$PROJECT_DIR$/src/views/nested/alarmMana/index.vue" />
+        <option value="$PROJECT_DIR$/src/views/nested/deviceMana/index.vue" />
+        <option value="$PROJECT_DIR$/src/views/nested/elecSign/createElecSign/index.vue" />
+        <option value="$PROJECT_DIR$/src/views/nested/elecSign/elecSignMana/index.vue" />
+        <option value="$PROJECT_DIR$/src/views/nested/elecSign/index.vue" />
+        <option value="$PROJECT_DIR$/src/views/nested/fenceCreate/fenceCreateInfo.vue" />
+        <option value="$PROJECT_DIR$/src/views/nested/fenceCreate/index.vue" />
+        <option value="$PROJECT_DIR$/src/views/nested/userGroup/index.vue" />
+        <option value="$PROJECT_DIR$/src/views/nested/sysMana/index.vue" />
+        <option value="$PROJECT_DIR$/src/views/nested/fenceMana/index.vue" />
+        <option value="$PROJECT_DIR$/src/router/index.js" />
+        <option value="$PROJECT_DIR$/src/views/nested/menu1/index.vue" />
       </list>
     </option>
   </component>
@@ -93,7 +284,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,6 +300,12 @@
               <item name="LanHuo-biyue" type="b2602c69:ProjectViewProjectNode" />
               <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LanHuo-biyue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -117,14 +313,123 @@
               <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="zhangyilei" type="462c0819:PsiDirectoryNode" />
+              <item name="nested" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LanHuo-biyue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="nested" type="462c0819:PsiDirectoryNode" />
+              <item name="alarmMana" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LanHuo-biyue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="nested" type="462c0819:PsiDirectoryNode" />
+              <item name="deviceMana" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LanHuo-biyue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="nested" type="462c0819:PsiDirectoryNode" />
+              <item name="elecSign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LanHuo-biyue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="nested" type="462c0819:PsiDirectoryNode" />
+              <item name="elecSign" type="462c0819:PsiDirectoryNode" />
+              <item name="createElecSign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LanHuo-biyue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="nested" type="462c0819:PsiDirectoryNode" />
+              <item name="elecSign" type="462c0819:PsiDirectoryNode" />
+              <item name="elecSignMana" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LanHuo-biyue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="nested" type="462c0819:PsiDirectoryNode" />
+              <item name="fenceCreate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LanHuo-biyue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="nested" type="462c0819:PsiDirectoryNode" />
+              <item name="fenceCreate" type="462c0819:PsiDirectoryNode" />
+              <item name="fenceInCreate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LanHuo-biyue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="nested" type="462c0819:PsiDirectoryNode" />
+              <item name="fenceCreate" type="462c0819:PsiDirectoryNode" />
+              <item name="fenceOutCreate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LanHuo-biyue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="nested" type="462c0819:PsiDirectoryNode" />
+              <item name="fenceMana" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LanHuo-biyue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="nested" type="462c0819:PsiDirectoryNode" />
+              <item name="homePage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LanHuo-biyue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="nested" type="462c0819:PsiDirectoryNode" />
+              <item name="menu1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LanHuo-biyue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="nested" type="462c0819:PsiDirectoryNode" />
+              <item name="sysMana" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LanHuo-biyue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LanHuo-biyue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="nested" type="462c0819:PsiDirectoryNode" />
+              <item name="userGroup" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -138,6 +443,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/api" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -206,11 +516,16 @@
       <updated>1557370207681</updated>
       <workItem from="1557370209516" duration="23000" />
       <workItem from="1557370647924" duration="1197000" />
+      <workItem from="1557380080005" duration="2501000" />
+      <workItem from="1557659667291" duration="142000" />
+      <workItem from="1557662993248" duration="875000" />
+      <workItem from="1557709401427" duration="92000" />
+      <workItem from="1557729362096" duration="2583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1220000" />
+    <option name="totallyTimeSpent" value="7413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -224,11 +539,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32969698" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27110156" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -254,12 +569,9 @@
     <entry file="file://$PROJECT_DIR$/src/views/wenyu/list.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/wenyu/list.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/wenyu/showTrack.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
+        <state relative-caret-position="4560">
           <caret line="305" column="2" selection-start-line="305" selection-start-column="2" selection-end-line="305" selection-end-column="2" />
           <folding>
             <element signature="n#style#0;n#el-button#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -269,25 +581,468 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/experienceshow.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/trackforecast.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1927">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        <state relative-caret-position="1920">
+          <caret line="128" column="52" selection-start-line="128" selection-start-column="52" selection-end-line="128" selection-end-column="52" />
           <folding>
             <element signature="n#style#0;n#el-table#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#860#885#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/interestshow.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
+        <state relative-caret-position="1440">
+          <caret line="96" column="50" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/experienceshow.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#template#0;n#el-col#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#template#0;n#el-col#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/fenceMana/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#0;n#el-form#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#1;n#el-form#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-row#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#el-row#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#0;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#4;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#0;n#el-form-item#7;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mock/similarity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/dashboard/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2265">
+          <caret line="151" column="28" selection-start-line="151" selection-start-column="28" selection-end-line="151" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/similarity.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/wenyu/list.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/wenyu/showTrack.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4575">
+          <caret line="305" column="2" selection-start-line="305" selection-start-column="2" selection-end-line="305" selection-end-column="2" />
+          <folding>
+            <element signature="n#style#0;n#el-button#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/trackforecast.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="128" column="52" selection-start-line="128" selection-start-column="52" selection-end-line="128" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#860#885#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/interestshow.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="96" column="50" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/experienceshow.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#template#0;n#el-col#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#template#0;n#el-col#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/fenceMana/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#0;n#el-form#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#1;n#el-form#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-row#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#el-row#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#0;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#4;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#0;n#el-form-item#7;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/wenyu/list.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/wenyu/showTrack.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4560">
+          <caret line="305" column="2" selection-start-line="305" selection-start-column="2" selection-end-line="305" selection-end-column="2" />
+          <folding>
+            <element signature="n#style#0;n#el-button#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/trackforecast.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1905">
+          <caret line="128" column="52" selection-start-line="128" selection-start-column="52" selection-end-line="128" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#860#885#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/interestshow.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="96" column="50" lean-forward="true" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/experienceshow.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#template#0;n#el-col#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#template#0;n#el-col#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/fenceMana/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#0;n#el-form#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#1;n#el-form#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-row#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#el-row#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#0;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#4;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#0;n#el-form-item#7;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/wenyu/list.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/wenyu/showTrack.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4560">
+          <caret line="305" column="2" selection-start-line="305" selection-start-column="2" selection-end-line="305" selection-end-column="2" />
+          <folding>
+            <element signature="n#style#0;n#el-button#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/trackforecast.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#860#885#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/experienceshow.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#template#0;n#el-col#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#template#0;n#el-col#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/interestshow.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
           <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#el-table#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/wenyu/list.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/wenyu/list.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/wenyu/showTrack.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4560">
+          <caret line="305" column="2" selection-start-line="305" selection-start-column="2" selection-end-line="305" selection-end-column="2" />
+          <folding>
+            <element signature="n#style#0;n#el-button#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/trackforecast.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1905">
+          <caret line="128" column="52" selection-start-line="128" selection-start-column="52" selection-end-line="128" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#860#885#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/interestshow.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="96" column="50" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/zhangyilei/experienceshow.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#template#0;n#el-col#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#template#0;n#el-col#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mock/similarity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/dashboard/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3225">
+          <caret line="217" column="28" selection-start-line="217" selection-start-column="28" selection-end-line="217" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/similarity.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/homePage/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/alarmMana/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/deviceMana/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/elecSign/createElecSign/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/elecSign/elecSignMana/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/elecSign/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/fenceCreate/fenceInCreate/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-82" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/fenceCreate/fenceOutCreate/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#dib#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#el-col#1;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#el-row#1;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#style#0;n#el-button#0;n#el-row#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/fenceCreate/fenceCreateInfo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/fenceCreate/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/table/index.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/userGroup/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/sysMana/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/fenceMana/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#0;n#el-form#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#1;n#el-form#0;n#el-row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-row#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#el-row#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#0;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#1;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#2;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#3;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-select#0;n#el-form-item#4;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-input#0;n#el-form-item#6;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#0;n#el-form-item#7;n#el-form#0;n#el-dialog#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="247" column="57" lean-forward="true" selection-start-line="247" selection-start-column="57" selection-end-line="247" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/nested/menu1/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

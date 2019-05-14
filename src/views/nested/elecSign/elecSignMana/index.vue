@@ -1,11 +1,6 @@
 <template>
    <div style="height:100%;">
       <div class='header-title'>
-        <el-breadcrumb separator-class="el-icon-arrow-right">
-          <el-breadcrumb-item>电子签到</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/ElecSignMana' }">系统电子签到管理</el-breadcrumb-item>
-          <el-breadcrumb-item></el-breadcrumb-item>
-        </el-breadcrumb>
       </div>
       <!--数据筛选条件+按钮-->
       <el-row class='subjectMana filterForm' v-bind:style="{width: tableWidth + 'px'}">

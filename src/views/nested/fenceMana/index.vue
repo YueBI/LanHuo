@@ -1,159 +1,141 @@
 <template>
-   <div style="height:100%;">
-      <div class='header-title'>
-        <el-breadcrumb separator-class="el-icon-arrow-right">
-          <el-breadcrumb-item :to="{ path: '/FenceMana' }">围栏信息管理</el-breadcrumb-item>
-          <el-breadcrumb-item></el-breadcrumb-item>
-        </el-breadcrumb>
-      </div>
-      <!--数据筛选条件+按钮-->
-      <el-row class='subjectMana filterForm' v-bind:style="{width: tableWidth + 'px'}">
-        <el-form :inline="true" v-model="filterForm" ref="filterForm">
-          <el-form-item label="查询条件">
-             <el-select style='width:240px' v-model="filterForm.queryCondition"  filterable placeholder="无查询条件">
-                <el-option v-for="item in options" :key="item.key" :label="item.label" :value="item.value">
-                </el-option>
-              </el-select>
-           </el-form-item>
-            <el-form-item label="查询内容：">
-            <el-input v-model.trim="filterForm.queryContent"  clearable style="width:220px"></el-input>
-           </el-form-item>
-          <el-form-item> 
-            <el-button type="primary" @click="getFenceFro()" style="">查询</el-button>
-           </el-form-item>
-        </el-form>
-      </el-row>
-      <!--表格数据-->
-      <el-row style="margin-top:10px">
-        <el-table
-          v-loading="loading"
-          :element-loading-text="loadingText"
-          element-loading-spinner="el-icon-loading"
-          :data="filterFormFro.tableData" 
-          :border="true"
-          :row-class-name="tableRowClassName"
-          :header-cell-class-name = "tableHeaderClassName"
-          tooltip-effect="dark"
-          v-bind:style="{width: tableWidth + 'px'}">
-          <el-table-column prop="index" label="序号" sortable min-width="50%">
-          </el-table-column>
-          <el-table-column prop="fenceId" label="围栏编号" min-width="50%">
-          </el-table-column>
-          <el-table-column prop="fenceName" label="围栏名称" min-width="60%">
-          </el-table-column>
-          <el-table-column prop="mapType" label="地图类型" min-width="60%">
-          </el-table-column>
-          <el-table-column prop="mapName" label="地图名称" min-width="60%">
-          </el-table-column>
-          <el-table-column prop="adminId" label="创建者" min-width="60%">
-          </el-table-column>
-          <el-table-column prop="createTime" label="创建时间" min-width="60%">
-          </el-table-column>
-          <el-table-column prop="isActive" label="激活状态" min-width="60%">
-          </el-table-column>
-          <el-table-column prop="groupName" label="所属组" min-width="60%">
-          </el-table-column>
-          <el-table-column prop="effectiveTime" label="生效时间" min-width="60%">
-          </el-table-column>
-          <el-table-column prop="alarmName" label="报警行为" min-width="60%">
-          </el-table-column>
-          <el-table-column prop="conditionName" label="触发条件" min-width="60%">
-          </el-table-column>
-          <el-table-column label="管理"  width="100">
+  <div style="height:100%;">
+    <div class="header-title" />
+    <!--数据筛选条件+按钮-->
+    <el-row class="subjectMana filterForm" :style="{width: tableWidth + 'px'}">
+      <el-form ref="filterForm" v-model="filterForm" :inline="true">
+        <el-form-item label="查询条件">
+          <el-select v-model="filterForm.queryCondition" style="width:240px" filterable placeholder="无查询条件">
+            <el-option v-for="item in options" :key="item.key" :label="item.label" :value="item.value" />
+          </el-select>
+        </el-form-item>
+        <el-form-item label="查询内容：">
+          <el-input v-model.trim="filterForm.queryContent" clearable style="width:220px" />
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary" style="" @click="getFenceFro()">查询</el-button>
+        </el-form-item>
+      </el-form>
+    </el-row>
+    <!--表格数据-->
+    <el-row style="margin-top:10px">
+      <el-table
+        v-loading="loading"
+        :element-loading-text="loadingText"
+        element-loading-spinner="el-icon-loading"
+        :data="filterFormFro.tableData"
+        :border="true"
+        :row-class-name="tableRowClassName"
+        :header-cell-class-name="tableHeaderClassName"
+        tooltip-effect="dark"
+        :style="{width: tableWidth + 'px'}"
+      >
+        <el-table-column prop="index" label="序号" sortable min-width="50%" />
+        <el-table-column prop="fenceId" label="围栏编号" min-width="50%" />
+        <el-table-column prop="fenceName" label="围栏名称" min-width="60%" />
+        <el-table-column prop="mapType" label="地图类型" min-width="60%" />
+        <el-table-column prop="mapName" label="地图名称" min-width="60%" />
+        <el-table-column prop="adminId" label="创建者" min-width="60%" />
+        <el-table-column prop="createTime" label="创建时间" min-width="60%" />
+        <el-table-column prop="isActive" label="激活状态" min-width="60%" />
+        <el-table-column prop="groupName" label="所属组" min-width="60%" />
+        <el-table-column prop="effectiveTime" label="生效时间" min-width="60%" />
+        <el-table-column prop="alarmName" label="报警行为" min-width="60%" />
+        <el-table-column prop="conditionName" label="触发条件" min-width="60%" />
+        <el-table-column label="管理" width="100">
           <template slot-scope="scope">
-              <el-button
+            <el-button
               size="mini"
               type="text"
               icon="el-icon-setting"
-              @click="handleEdit(scope.$index, scope.row)"></el-button>
-              <el-button
+              @click="handleEdit(scope.$index, scope.row)"
+            />
+            <el-button
               size="mini"
               icon="el-icon-delete"
               type="text"
-              @click="handleDelete(scope.$index, scope.row)"></el-button>
-              <el-button
+              @click="handleDelete(scope.$index, scope.row)"
+            />
+            <el-button
               size="mini"
               icon="el-icon-document"
               type="text"
-              @click="handleInfo(scope.$index, scope.row)"></el-button>
+              @click="handleInfo(scope.$index, scope.row)"
+            />
           </template>
-          </el-table-column>
-        </el-table>
-      </el-row>
-      <!-- 表格下方分页 -->
-      <el-row>
-        <div class="pagination" style="text-align:center" v-show="paginationVisible">
-            <el-pagination
-              @current-change="handleCurrentChange"
-              background
-              :page-size="15"
-              :total="filterFormFro.totalCount"
-              layout="total, prev, pager, next, jumper"
-              :current-page.sync="filterForm.currentPage">
-            </el-pagination>
-        </div>
-      </el-row>
-      <!-- 编辑围栏信息弹窗 -->
-      <el-dialog title="编辑围栏信息"   :visible.sync="editVisable"
-          :closeOnClickModal="false" 
-          width="550px"
-          class="manaDialog"
-          :close-on-click-modal="false" 
-          :close-on-press-escape="false"
-          @close="resetForm('editForm')">
-        <el-form :model='editForm' ref="editForm">
-          <el-form-item label="名称：" :label-width="formLabelWidth" prop="fenceName">
-            <el-input style='width:300px' clearable v-model="editForm.fenceName"></el-input>
-          </el-form-item>
-          <el-form-item label="描述：" :label-width="formLabelWidth" prop="fenceDes">
-            <el-input style='width:300px' clearable v-model="editForm.fenceDes"></el-input>
-          </el-form-item>
-          <el-form-item label="用户组：" :label-width="formLabelWidth" prop="groupName">
-            <el-select style='width:240px' v-model="editForm.groupName"  filterable placeholder="请输入用户组">
-              <el-option v-for="item in options" :key="item.groupName" :label="item.groupName" :value="item.groupName">
-              </el-option>
-            </el-select>
-          </el-form-item>
-          <el-form-item label="触发条件：" :label-width="formLabelWidth" prop="conditionName">
-            <el-select style='width:240px' v-model="editForm.conditionName"  filterable placeholder="请输入触发条件">
-              <el-option v-for="item in options" :key="item.conditionName" :label="item.conditionName" :value="item.conditionName">
-              </el-option>
-            </el-select>
-          </el-form-item>
-          <el-form-item label="报警方式：" :label-width="formLabelWidth" prop="alarmName">
-            <el-select style='width:240px' v-model="editForm.alarmName"  filterable placeholder="请输入报警方式">
-              <el-option v-for="item in options" :key="item.alarmName" :label="item.alarmName" :value="item.alarmName">
-              </el-option>
-            </el-select>
-          </el-form-item>
-          <el-form-item label="生效时间：" :label-width="formLabelWidth" prop="effectiveTime">
-            <el-date-picker
+        </el-table-column>
+      </el-table>
+    </el-row>
+    <!-- 表格下方分页 -->
+    <el-row>
+      <div v-show="paginationVisible" class="pagination" style="text-align:center">
+        <el-pagination
+          background
+          :page-size="15"
+          :total="filterFormFro.totalCount"
+          layout="total, prev, pager, next, jumper"
+          :current-page.sync="filterForm.currentPage"
+          @current-change="handleCurrentChange"
+        />
+      </div>
+    </el-row>
+    <!-- 编辑围栏信息弹窗 -->
+    <el-dialog
+      title="编辑围栏信息"
+      :visible.sync="editVisable"
+      :close-on-click-modal="false"
+      width="550px"
+      class="manaDialog"
+      :close-on-press-escape="false"
+      @close="resetForm('editForm')"
+    >
+      <el-form ref="editForm" :model="editForm">
+        <el-form-item label="名称：" :label-width="formLabelWidth" prop="fenceName">
+          <el-input v-model="editForm.fenceName" style="width:300px" clearable />
+        </el-form-item>
+        <el-form-item label="描述：" :label-width="formLabelWidth" prop="fenceDes">
+          <el-input v-model="editForm.fenceDes" style="width:300px" clearable />
+        </el-form-item>
+        <el-form-item label="用户组：" :label-width="formLabelWidth" prop="groupName">
+          <el-select v-model="editForm.groupName" style="width:240px" filterable placeholder="请输入用户组">
+            <el-option v-for="item in options" :key="item.groupName" :label="item.groupName" :value="item.groupName" />
+          </el-select>
+        </el-form-item>
+        <el-form-item label="触发条件：" :label-width="formLabelWidth" prop="conditionName">
+          <el-select v-model="editForm.conditionName" style="width:240px" filterable placeholder="请输入触发条件">
+            <el-option v-for="item in options" :key="item.conditionName" :label="item.conditionName" :value="item.conditionName" />
+          </el-select>
+        </el-form-item>
+        <el-form-item label="报警方式：" :label-width="formLabelWidth" prop="alarmName">
+          <el-select v-model="editForm.alarmName" style="width:240px" filterable placeholder="请输入报警方式">
+            <el-option v-for="item in options" :key="item.alarmName" :label="item.alarmName" :value="item.alarmName" />
+          </el-select>
+        </el-form-item>
+        <el-form-item label="生效时间：" :label-width="formLabelWidth" prop="effectiveTime">
+          <el-date-picker
             v-model="editForm.effectiveTime"
             type="datetime"
             placeholder="选择日期时间"
             align="right"
-            :picker-options="pickerOptions">
-            </el-date-picker>
-          </el-form-item>
-          <el-form-item label="管理员：" :label-width="formLabelWidth" prop="adminName">
-            <el-input style='width:300px' clearable v-model="editForm.adminName"></el-input>
-          </el-form-item>
-          <el-form-item label="" :label-width="formLabelWidth" >
-            <el-button style="width:240px" type="primary" @click="submitEdit()">保 存</el-button>
-          </el-form-item>
-        </el-form>
-      </el-dialog>
-    </div>
+            :picker-options="pickerOptions"
+          />
+        </el-form-item>
+        <el-form-item label="管理员：" :label-width="formLabelWidth" prop="adminName">
+          <el-input v-model="editForm.adminName" style="width:300px" clearable />
+        </el-form-item>
+        <el-form-item label="" :label-width="formLabelWidth">
+          <el-button style="width:240px" type="primary" @click="submitEdit()">保 存</el-button>
+        </el-form-item>
+      </el-form>
+    </el-dialog>
+  </div>
 </template>
 <script>
 import api from '@/api/hardware/api.js'
 // import '../../static/css/gateMana/common.css'
 // import '../../static/css/gateMana/dianziweilan.css'
 export default {
-  created () {
-    this.getFenceFro()
-  },
-  data () {
+  data() {
     return {
       testData: [],
       filterFormFro: {
@@ -205,7 +187,7 @@ export default {
       pickerOptions: {
         shortcuts: [{
           text: '最近一周',
-          onClick (picker) {
+          onClick(picker) {
             const end = new Date()
             const start = new Date()
             start.setTime(start.getTime() - 3600 * 1000 * 24 * 7)
@@ -213,7 +195,7 @@ export default {
           }
         }, {
           text: '最近一个月',
-          onClick (picker) {
+          onClick(picker) {
             const end = new Date()
             const start = new Date()
             start.setTime(start.getTime() - 3600 * 1000 * 24 * 30)
@@ -221,7 +203,7 @@ export default {
           }
         }, {
           text: '最近三个月',
-          onClick (picker) {
+          onClick(picker) {
             const end = new Date()
             const start = new Date()
             start.setTime(start.getTime() - 3600 * 1000 * 24 * 90)
@@ -231,26 +213,32 @@ export default {
       }
     }
   },
+  created() {
+    this.getFenceFro()
+  },
+  mounted() {
+    this.tableWidth = document.body.scrollWidth - 259 - 20
+  },
   methods: {
     /** ********************************* 页面处理数据格式等函数 ************************************************ */
-     // 点击表格中的“编辑”按钮
-     // 分页页面跳转时
-    handleCurrentChange (val) {
+    // 点击表格中的“编辑”按钮
+    // 分页页面跳转时
+    handleCurrentChange(val) {
       this.filterForm.currentPage = val
       this.getFenceFro(this.filterForm.currentPage)
     },
     // 设置表头样式
-    tableHeaderClassName ({row, column, rowIndex, columnIndex}) {
+    tableHeaderClassName({ row, column, rowIndex, columnIndex }) {
       if (rowIndex === 0) {
         return 'headerClass'
       }
     },
     // 设置表格每一行样式
-    tableRowClassName ({row, rowIndex}) {
+    tableRowClassName({ row, rowIndex }) {
       return 'rowClass'
     },
-    handleEdit (index, row) {
-      let data = this.filterFormFro.tableData[index]
+    handleEdit(index, row) {
+      const data = this.filterFormFro.tableData[index]
       this.editForm.fenceName = row.fenceName
       this.editForm.oldFenceName = data.fenceName
       this.editForm.fenceDes = row.fenceName
@@ -262,7 +250,7 @@ export default {
       this.editVisable = true
     },
     // 点击表格中的“删除”按钮
-    handleDelete (index, row) {
+    handleDelete(index, row) {
       // let data = this.filterFormFro.tableData[index]
       this.deleteForm.fenceId = row.fenceId
       this.$confirm('确定删除该信息吗?', '提示', {
@@ -278,8 +266,8 @@ export default {
         })
       })
     },
-    handleInfo (index, row) {
-      let data = this.filterFormFro.tableData[index]
+    handleInfo(index, row) {
+      const data = this.filterFormFro.tableData[index]
       this.$router.push({
         name: 'alarmMana',
         query: {
@@ -289,7 +277,7 @@ export default {
       })
     },
     // 编辑围栏信息，点击“保存”
-    submitEdit () {
+    submitEdit() {
       this.$refs['editForm'].validate((valid) => {
         if (valid) {
           this.editFenceFro()
@@ -299,7 +287,7 @@ export default {
       })
     },
     // 将时间转化为字符串(filterForm)
-    formatDayFro (now) {
+    formatDayFro(now) {
       var year = now.getFullYear()
       var month = now.getMonth() + 1
       month = month < 10 ? '0' + month : month
@@ -314,11 +302,11 @@ export default {
       return year + '-' + month + '-' + date + ' ' + hour + ':' + minute + ':' + second
     },
     // 触发条件下拉列表
-    conditionRemoteMethod (query) {
+    conditionRemoteMethod(query) {
       if (query !== '') {
         api.getAllCondition({}).then(res => {
           if (res.result === 1000) {
-            let data = res.content
+            const data = res.content
             if (data.list.length > 0) {
               this.conditionOptions = data.list
             }
@@ -327,11 +315,11 @@ export default {
       }
     },
     // 警报下拉列表
-    alarmRemoteMethod (query) {
+    alarmRemoteMethod(query) {
       if (query !== '') {
         api.getAllAlarm({}).then(res => {
           if (res.result === 1000) {
-            let data = res.content
+            const data = res.content
             if (data.list.length > 0) {
               this.alarmOptions = data.list
             }
@@ -340,9 +328,9 @@ export default {
       }
     },
     // 查询信息
-    getFenceFro (pageNum) {
+    getFenceFro(pageNum) {
       this.loading = true
-      let para = {
+      const para = {
         pageSize: 15,
         pageNum: parseInt(this.filterForm.currentPage),
         buildName: '学五',
@@ -367,7 +355,7 @@ export default {
         if (res.result === 1000) {
           console.log('Here is res:')
           console.log(res)
-          let data = res.content
+          const data = res.content
           data.allPages > 0 ? this.paginationVisible = true : this.paginationVisible = false
           if (data.list.length > 0) {
             // this.filterFormFro.totalCount = data.allCount
@@ -392,8 +380,8 @@ export default {
       })
     },
     // 硬件信息-编辑围栏信息
-    editFenceFro () {
-      let para = {
+    editFenceFro() {
+      const para = {
         fenceName: this.editForm.fenceName,
         oldFenceName: this.editForm.oldFenceName,
         fenceDes: this.editForm.fenceDes,
@@ -429,8 +417,8 @@ export default {
       })
     },
     // 删除围栏信息
-    deleteFenceFro () {
-      let para = {
+    deleteFenceFro() {
+      const para = {
         fenceId: parseInt(this.deleteForm.fenceId)
       }
       api.deleteFence(para).then(res => {
@@ -446,9 +434,6 @@ export default {
         this.$message.error(error)
       })
     }
-  },
-  mounted () {
-    this.tableWidth = document.body.scrollWidth - 259 - 20
   }
 }
 </script>

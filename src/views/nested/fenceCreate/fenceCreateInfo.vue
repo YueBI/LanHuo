@@ -1,11 +1,6 @@
 <template>
    <div style="height:100%;">
       <div class='header-title'>
-        <el-breadcrumb separator-class="el-icon-arrow-right">
-          <el-breadcrumb-item>创建围栏</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/fenceCreateInfo' }">填写基本信息</el-breadcrumb-item>
-          <el-breadcrumb-item></el-breadcrumb-item>
-        </el-breadcrumb>
       </div>
       <div class='addForm'>
         <el-form :model='addForm' label-width="100px" ref="addForm">

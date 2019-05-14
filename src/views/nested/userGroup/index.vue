@@ -1,10 +1,6 @@
 <template>
    <div style="height:100%;">
       <div class='header-title'>
-        <el-breadcrumb separator-class="el-icon-arrow-right">
-          <el-breadcrumb-item :to="{ path: '/userGroup' }">用户组管理</el-breadcrumb-item>
-          <el-breadcrumb-item></el-breadcrumb-item>
-        </el-breadcrumb>
       </div>
       <!--数据筛选条件+按钮-->
       <el-row class='subjectMana filterForm' v-bind:style="{width: tableWidth + 'px'}">

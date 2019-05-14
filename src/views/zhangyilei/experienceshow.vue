@@ -3,9 +3,9 @@
     <el-row>
       <el-col>
         <template>
-          <el-table :data="tableData" style="width: 500px" max-height="300">
-            <el-table-column fixed prop="rank" label="排名" width="100"></el-table-column>
-            <el-table-column prop="userID" label="用户ID" width="150"></el-table-column>
+          <el-table :data="tableData" style="margin-top: 1px" max-height="calc(100vh)">
+            <el-table-column fixed prop="rank" label="排名" ></el-table-column>
+            <el-table-column prop="userID" label="用户ID"  sortable=""></el-table-column>
             <el-table-column prop="empiricalValue" label="经验值"></el-table-column>
           </el-table>
           <div

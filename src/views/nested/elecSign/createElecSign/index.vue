@@ -2,11 +2,7 @@
    <div style="height:100%;">
       <div class='header-title'>
         <!-- 共分两级 -->
-        <el-breadcrumb separator-class="el-icon-arrow-right">
-          <el-breadcrumb-item>电子签到</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/CreateElecSignMana' }">创建电子签到</el-breadcrumb-item>
-          <el-breadcrumb-item></el-breadcrumb-item>
-        </el-breadcrumb>
+
       </div>
       <!-- 填写的表单 -->
       <!-- 通过 :model将父组件收到的信息传回子组件“addForm” -->
