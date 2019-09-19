@@ -168,6 +168,36 @@
       </el-table>
       <!-- 确定按钮 -->
       <el-button v-show="isShow" class="btn" @click="hideList" type="primary" plain>确定</el-button>
+      <!-- 用户相似度 -->
+      <!-- <el-table
+        class="list-container"
+        ref="singleTable3"
+        max-height="450"
+        v-loading="loading"
+        :element-loading-text="loadingText"
+        element-loading-spinner="el-icon-loading"
+        :data="userSimilarity"
+        border
+        v-show="isShowSimi">
+        <el-table-column
+          property="userSimilarity"
+          label="用户相似度"
+          width="55"
+          align="center">
+        </el-table-column>
+      </el-table> -->
+      <el-input
+        class="list-container"
+        style="margin-bottom:20px;"
+        :readonly="true"
+        v-model="userSimilarity"
+        v-loading="loading"
+        :element-loading-text="loadingText"
+        element-loading-spinner="el-icon-loading"
+        v-show="isShowSimi">
+        <template slot="prepend">用户相似度：</template>
+      </el-input>
+      <!-- <el-input v-model="userSimilarity" :disabled="true" v-show="isShowSimi"></el-input> -->
       <!-- 相似度列表 -->
       <el-table
         class="list-container"
@@ -267,7 +297,8 @@ export default {
       trajectorys: [],
       namevalue: '',
       idvalue: '',
-      showPath: false
+      showPath: false,
+      userSimilarity: 0
     }
   },
   mounted() {
@@ -282,6 +313,13 @@ export default {
         endtimeValue
       }
     }
+    // inputValue() {
+    //   const { selectVal, selectVal2 } = this
+    //   return {
+    //     selectVal,
+    //     selectVal2
+    //   }
+    // }
   },
   watch: {
     // 监测开始时间和结束时间，确保开始时间不能大于结束时间，以及两者都不能大于当前系统的时间，否则就会出现错误提示
@@ -319,26 +357,6 @@ export default {
             // if (this.activeName === 'in') {
             // 根据时间段绘制出该室内地图上的轨迹
             this.showTrack(this.starttimeValue, this.endtimeValue)
-            // } else {
-            //   // 绘制室外地图轨迹
-            //   var that = this
-            //   // 设置延迟，是为了点击时间进行选择后，等待一下时间下拉框的消失
-            //   setTimeout(function (){
-            //     that.showouttrack("black")
-            //     // that.showAlltrajectory()
-            //   }, 500)
-            //   // 设置全局的加载
-            //   let loadingInstance = Loading.service({
-            //       lock: true,
-            //       text:'拼命绘制轨迹地图中...',
-            //       spinner: 'el-icon-loading',
-            //       background: 'rgba(0, 0, 0, 0.7)'
-            //   });
-            //   // 因为读取和绘制需要时间，所以要延迟加载
-            //   setTimeout(function (){
-            //     loadingInstance.close();
-            //   }, 500)
-            // }
           }
         }
       },
@@ -367,6 +385,24 @@ export default {
         this.showTrack(this.starttimeValue,this.endtimeValue)
       }
     }
+    // inputValue: {
+    //   handler: function() {
+    //     // 先清空所有的轨迹
+    //     var svg = d3.select('.app-main').select('svg')
+    //     svg.selectAll('circle').remove()
+    //     svg.selectAll('path').remove()
+    //     svg.selectAll('g').remove()
+    //     svg.selectAll('img').remove()
+    //     if (this.selectVal != '' && this.selectVal2 != '') {
+    //       this.showUserTrack(1)
+    //       this.showUserTrack(2)
+    //     } else if (this.selectVal == '' && this.selectVal2 != ''){
+    //       this.showUserTrack(2)
+    //     } else {
+    //       this.showUserTrack(1)
+    //     }
+    //   }
+    // }
   },
   methods: {
     ////////////////室内室外兼顾/////////////////////
@@ -465,6 +501,10 @@ export default {
         console.log("接收成功")
         // console.log(response.data.content.list[1])
         this.trajectorys = response.data.content.list
+      },
+      err=>{
+        // console.log(err)
+        console.log("接收失败")
       })
     },
     handletrajectorySelect(item) {
@@ -523,8 +563,8 @@ export default {
       if (this.selectVal !== '' && this.selectVal2 !== '') { // 如果两个用户都有值，则需要显示相似度列表
         this.isShowSimi = true
         if (this.activeName === 'in') {
-          // this.showIndoorSimilarity()
-          this.showOutdoorSimilarity()  // 当后台算法连接好接口以后偶，就可以转换成上面那一句
+          this.showIndoorSimilarity()
+          // this.showOutdoorSimilarity()  // 当后台算法连接好接口以后偶，就可以转换成上面那一句
         }else {
           this.showOutdoorSimilarity()
         }
@@ -537,32 +577,47 @@ export default {
         this.selectVal = row.userName // 当检测到是第一个用户选择框的时候，则将第一个选择框的值进行更新
         this.userAid = row.userID // 更新用户的id
         var linecolor = 'red'
-        var tid = 172
+        // var tid = 172
+        // var para = {
+        //   userID : parseInt(row.userID)
+        // }
       } else {
         this.selectVal2 = row.userName // 当检测到是第二个用户选择框的时候，则将第二个选择框的值进行更新
         this.userBid = row.userID // 更新用户的id
         var linecolor = 'blue'
-        var tid = 187
+        // var tid = 187
       }
       this.currentRow = row // 将当前行存储下来
+      var para = {
+        userID : parseInt(row.userID)
+      }
       // 判断是室内地图还是室外地图，然后进行用户地图绘制
       if (this.activeName === 'in') { // 室内地图
         this.showUserTrack(this.flag)
       } else { // 室外地图
         var that = this
-        this.trajectoryId = tid
-        setTimeout(function (){
-          that.showouttrack(linecolor)
-        }, 1000)
-        let loadingInstance = Loading.service({
-            lock: true,
-            text:'拼命绘制轨迹地图中...',
-            spinner: 'el-icon-loading',
-            background: 'rgba(0, 0, 0, 0.7)'
-        });
-        setTimeout(function (){
-          loadingInstance.close();
-        }, 1000)
+        api.getOutdoorTrajectories(para).then(response => {
+          var data = response.data.content.list
+          data.forEach((item) => {
+            that.trajectoryId = item.trajectoryId
+          },
+          err=>{
+            // console.log(err)
+            console.log("接收失败")
+          })
+          setTimeout(function (){
+            that.showouttrack(linecolor)
+          }, 1000)
+          let loadingInstance = Loading.service({
+              lock: true,
+              text:'拼命绘制轨迹地图中...',
+              spinner: 'el-icon-loading',
+              background: 'rgba(0, 0, 0, 0.7)'
+          });
+          setTimeout(function (){
+            loadingInstance.close();
+          }, 1000)
+        })
       }
     },
     // 设置当前点击的行，传进去空的话就是取消选中状态
@@ -599,6 +654,10 @@ export default {
         api.queryIndoorMap().then(response => {
           this.maps = response.data.content.list
           console.log("获得地图列表的信息成功")
+        },
+        err=>{
+          // console.log(err)
+          console.log("接收失败")
         })
       }
     },
@@ -672,6 +731,10 @@ export default {
           })
           that.userData = datalist
         }
+      },
+      err=>{
+        // console.log(err)
+        console.log("接收失败")
       })
     },
     // 显示室内轨迹相似度
@@ -682,15 +745,16 @@ export default {
       let para = {
         userAID : parseInt(this.userAid),
         userBID : parseInt(this.userBid),
-        mapId : parseInt(this.mapid),
-        startDate : "2008-07-04",
-        endDate : "2009-09-04"
+        mapID : parseInt(this.mapid),
+        startDate : "2010-01-01",
+        endDate : "2019-01-01"
       }
-      // console.log(para)
+      console.log(para)
       api.getIndoorSimilarity(para).then(response => { // 获取室内用户相似度并更新相似度列表
+        console.log('接收室内用户相似度成功')
         this.loading = false
         data = response.data.content.trajectory
-        // data = response.data.content.list
+        console.log(response.data.content)
         console.log("获得室内相似度的信息")
         var dataitem = []
         data.forEach(function(item) {
@@ -700,7 +764,12 @@ export default {
             similarity: item['similarity']
           })
         })
+        that.userSimilarity = response.data.content.userSimilarity
         that.similarityList = dataitem
+      },
+      err=>{
+        // console.log(err)
+        console.log("接收失败")
       })
     },
     // 当点击相似度那一行的时候，要在图中显示出轨迹
@@ -723,23 +792,19 @@ export default {
       api.getIndoorTrajectoryDetail(para).then(response => {
         console.log(response.data.content.list)
         data = response.data.content.list
-        // data = data[para.trajectoryId]
         console.log("获得该轨迹的详细信息")
-        console.log(data)
-        // // return data
-        // that.track = data
+        // console.log(data)
         this.showTrackdots(data,'blue')
-        // that.$forceUpdate()
       })
       api.getIndoorTrajectoryDetail(parab).then(response => {
         data = response.data.content.list
-        // data = data[parab.trajectoryId]
         console.log("获得该轨迹的详细信息")
-        console.log(data)
-        // // return data
-        // that.track = data
+        // console.log(data)
         this.showTrackdots(data,'red')
-        // that.$forceUpdate()
+      },
+      err=>{
+        // console.log(err)
+        console.log("接收失败")
       })
     },
     // 显示室内该时间段用户轨迹点
@@ -754,16 +819,6 @@ export default {
         svg.selectAll('img').remove()
       }
       this.showPath = !this.showPath
-      
-      // this.trackDatas.forEach(function(item) {
-      //   var x = (item.x / 1019) * 4167 // 获取x轴坐标
-      //   var y = (item.y / 1019) * 4167 // 获取y轴坐标
-      //   svg.append('circle') // 紫色圆圈绘制，位置半径
-      //     .attr('cx', x)
-      //     .attr('cy', y)
-      //     .attr('r', 15)
-      //     .style('fill', 'red')
-      // })
     },
     // 显示室内单条轨迹
     showTrackdots(indoorItem,color) {
@@ -787,7 +842,7 @@ export default {
           .attr('cx', x)
           .attr('cy', y)
           .attr('r', 15)
-          .style('fill', 'red')
+          .style('fill', 'purple')
         if (start) {
           path += 'M' + x + ' ' + y + ' '
           start = false
@@ -876,6 +931,10 @@ export default {
                 that.trackDatas = item
                 that.showTrackdots(item,"black")
               }
+            },
+            err=>{
+              // console.log(err)
+              console.log("接收失败")
             })
           })
         })
@@ -913,8 +972,16 @@ export default {
           api.getIndoorTrajectoryDetail(tid).then(response => {
               item = response.data.content.list
               that.showTrackdots(item,linecolor)
+          },
+          err=>{
+            // console.log(err)
+            console.log("接收失败")
           })
         })
+      },
+      err=>{
+        // console.log(err)
+        console.log("接收失败")
       })
     },
     ////////////////////室外////////////////////////////////
@@ -970,6 +1037,10 @@ export default {
           })
           that.userData = datalist
         }
+      },
+      err=>{
+        // console.log(err)
+        console.log("接收失败")
       })
     },
     // 显示室外轨迹相似度
@@ -977,8 +1048,8 @@ export default {
       var data
       var that = this
       let para = {
-        userAID : 0,
-        userBID : 1,
+        userAID : parseInt(this.userAid),
+        userBID : parseInt(this.userBid),
         startDate : "2008-07-04",
         endDate : "2009-09-04"
       }
@@ -997,6 +1068,10 @@ export default {
           })
         })
         that.similarityList = dataitem
+      },
+      err=>{
+        // console.log(err)
+        console.log("接收失败")
       })
     },
     // 当点击相似度那一行的时候，要在图中显示出轨迹
@@ -1128,6 +1203,9 @@ export default {
           // console.log(item)
           that.trajectoryId = item.trajectoryId
         })
+      },
+      err=>{
+        console.log("接收失败")
       })
     },
     hello(){
@@ -1295,5 +1373,11 @@ export default {
   .btn{
     margin-top: 5%;
     margin-left: 28%;
+  }
+  input.disabled{
+    background-color: #fff;
+    /* background:#fff;
+    opacity:1;
+    color:black; */
   }
 </style>

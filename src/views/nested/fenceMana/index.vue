@@ -1,8 +1,8 @@
 <template>
   <div style="height:100%;">
-    <div class="header-title" />
+    <div class="header-title" style="margin-top: 20px" />
     <!--数据筛选条件+按钮-->
-    <el-row class="subjectMana filterForm" :style="{width: tableWidth + 'px'}">
+    <el-row class="subjectMana filterForm" :style="{width: tableWidth + 'px'}" style="margin-left: 15px">
       <el-form ref="filterForm" v-model="filterForm" :inline="true">
         <el-form-item label="查询条件">
           <el-select v-model="filterForm.queryCondition" style="width:240px" filterable placeholder="无查询条件">
@@ -18,31 +18,29 @@
       </el-form>
     </el-row>
     <!--表格数据-->
-    <el-row style="margin-top:10px">
+    <el-row>
       <el-table
         v-loading="loading"
         :element-loading-text="loadingText"
         element-loading-spinner="el-icon-loading"
         :data="filterFormFro.tableData"
-        :border="true"
         :row-class-name="tableRowClassName"
         :header-cell-class-name="tableHeaderClassName"
         tooltip-effect="dark"
-        :style="{width: tableWidth + 'px'}"
       >
-        <el-table-column prop="index" label="序号" sortable min-width="50%" />
-        <el-table-column prop="fenceId" label="围栏编号" min-width="50%" />
-        <el-table-column prop="fenceName" label="围栏名称" min-width="60%" />
-        <el-table-column prop="mapType" label="地图类型" min-width="60%" />
-        <el-table-column prop="mapName" label="地图名称" min-width="60%" />
-        <el-table-column prop="adminId" label="创建者" min-width="60%" />
-        <el-table-column prop="createTime" label="创建时间" min-width="60%" />
-        <el-table-column prop="isActive" label="激活状态" min-width="60%" />
-        <el-table-column prop="groupName" label="所属组" min-width="60%" />
-        <el-table-column prop="effectiveTime" label="生效时间" min-width="60%" />
-        <el-table-column prop="alarmName" label="报警行为" min-width="60%" />
-        <el-table-column prop="conditionName" label="触发条件" min-width="60%" />
-        <el-table-column label="管理" width="100">
+        <el-table-column prop="index" label="序号" sortable min-width="50" align="center" />
+        <el-table-column prop="fenceId" label="围栏编号" min-width="60" align="center" />
+        <el-table-column prop="fenceName" label="围栏名称" min-width="60" align="center"/>
+        <el-table-column prop="mapType" label="地图类型" min-width="60" align="center"/>
+        <el-table-column prop="mapName" label="地图名称" min-width="60" align="center"/>
+        <el-table-column prop="adminId" label="创建者" min-width="60" align="center"/>
+        <el-table-column prop="createTime" label="创建时间" min-width="60" align="center"/>
+        <el-table-column prop="isActive" label="激活状态" min-width="60" align="center"/>
+        <el-table-column prop="groupName" label="所属组" min-width="60" align="center"/>
+        <el-table-column prop="effectiveTime" label="生效时间" min-width="60" align="center"/>
+        <el-table-column prop="alarmName" label="报警行为" min-width="60" align="center"/>
+        <el-table-column prop="conditionName" label="触发条件" min-width="60" align="center" />
+        <el-table-column label="管理" width="100" align="center">
           <template slot-scope="scope">
             <el-button
               size="mini"

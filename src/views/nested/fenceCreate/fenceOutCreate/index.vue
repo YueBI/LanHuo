@@ -1,17 +1,17 @@
 <template>
   <div>
     <!--表格数据-->
-    <div class="row">
-        <div style="dashed #000;width: 100px">
-            <div style="dashed #000; display: flex;flex-flow: row">
-                <div style="margin-left:10px;text-align:center;">工具栏</div>
-                <div style="margin-left:10px;margin-top:5px;text-align:center;font-size:30px" @click="draw('point')"><i class="fa fa-hand-o-up fa-lg" /></div>
-                <div style="margin-left:2px;margin-top:35px;text-align:center;font-size:30px" @click="draw('circle')"><i class="fa fa-circle-thin fa-lg" /></div>
-                <div class="" style="margin-left:2px;margin-top:35px;text-align:center;font-size:30px" @click="draw('clear')"><i class="fa fa-close fa-lg" /></div>
-                <el-button style="width:150px;margin-top:20px;" @click="fenceCreate()">创建电子围栏</el-button>
-            </div>
-        </div>
+    <div>
       <div>
+          <div class="float" style="dashed #000">
+              <div style="dashed #000; display: flex;flex-flow: column">
+                  <div style="margin-left:10px;text-align:center;">工具栏</div>
+                  <div style="margin-left:10px;margin-top:20px;text-align:center;font-size:30px" @click="draw('point')" ><i class="fa fa-hand-o-up fa-lg" /></div>
+                  <div style="margin-left:10px;margin-top:20px;text-align:center;font-size:30px" @click="draw('circle')"><i class="fa fa-circle-thin fa-lg" /></div>
+                  <div style="margin-left:10px;margin-top:20px;text-align:center;font-size:30px" @click="draw('clear')"><i class="fa fa-close fa-lg" /></div>
+                  <el-button style="text-align:center;width:150px;margin-top:20px;" @click="fenceCreate()">创建电子围栏</el-button>
+              </div>
+          </div>
         <baidu-map class="map" :scroll-wheel-zoom="true" :center="{lng: 116.404, lat: 39.915}" :zoom="14" @click="selectPoint">
           <bm-marker v-if="pointShow" :position="{lng: this.fenceShape[0], lat: this.fenceShape[1]}" :dragging="true" />
           <!-- <bm-polygon v-if=polygonShow :path="polygonPath" stroke-color="blue" :stroke-opacity="0.5" :stroke-weight="2" :editing="true" @lineupdate="updatePolygonPath" @dblclick="sendPath"/> -->
@@ -175,4 +175,20 @@ export default {
         display: flex;
         flex-flow: column;
     }
+.float{
+    background-color: white;
+    overflow: hidden;
+    z-index: 9999;
+    position: fixed;
+    padding:5px;
+    width: 160px;
+    height: 300px;
+    text-align: center;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    right: 5%;
+    top: 20%;
+}
 </style>

@@ -21,6 +21,7 @@
         class="nest-menu"
       />
     </el-submenu>
+      <!--<div style="background-color: #ffffff; height: 1px;width: 100%"></div>-->
   </div>
 </template>
 
@@ -93,3 +94,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .menu-wrapper {
+      /* height: 56px !important;*/
+  }
+</style>
