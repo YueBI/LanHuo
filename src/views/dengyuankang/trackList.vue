@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-container">
-    时间:
+    <!--时间:
     <el-time-select
       v-model="startTime"
       placeholder="起始时间"
@@ -10,13 +10,11 @@
       v-model="endTime"
       placeholder="结束时间"
       :picker-options="{start: '08:30', step: '00:15', end: '18:30', minTime: startTime}"
-    />
-    <el-button @click="findTrackList">查询</el-button>
-    <el-button @click.native="trackDeal">轨迹预处理</el-button>
-    <el-button @click.native="trackCondense">轨迹压缩</el-button>
-    <el-table ref="singleTable" :data="tableData" border style="width: 100%" @row-click="showRow">
+    />-->
+    <!--<el-button type="primary" plain @click="findTrackList">查询</el-button>-->
+    <el-table ref="singleTable" :data="tableData" border style="width: 100%; margin-top: 10px" @row-click="showRow">
       <el-table-column label="选择" width="70" header-align="center" align="center">
-        <template scope="scope">
+        <template slot-scope="scope">
           <el-radio v-model="radio" class="radio" :label="scope.$index">&nbsp;</el-radio>
         </template>
       </el-table-column>
@@ -24,8 +22,14 @@
       <el-table-column prop="userId" label="用户姓名" width="180" />
       <el-table-column prop="startTime" label="开始时间" width="180" />
       <el-table-column prop="endTime" label="结束时间" width="180" />
+      <el-table-column>
+        <template slot="header">
+          <el-button type="primary" plain @click="showTrack">显示用户轨迹</el-button>
+          <el-button @click.native="trackDeal">轨迹预处理</el-button>
+          <el-button @click.native="trackCondense">轨迹压缩</el-button>
+        </template>
+      </el-table-column>
     </el-table>
-    <el-button @click="showTrack">显示</el-button>
   </div>
 </template>
 
@@ -78,16 +82,16 @@ export default {
   computed: {
     ...mapGetters(['name'])
   },
-  // mounted(){
-  //   //测试查找轨迹功能
-  //   this.findTrackList();
-  // },
+  mounted() {
+    // 测试查找轨迹功能
+    this.findTrackList()
+  },
   methods: {
     // 获取轨迹列表（发送从userList中选择后传递的信息，获取对应的轨迹列表，还未考虑时间数据，只传递了mapId和userId）
     findTrackList: function() {
       this.mapId = this.$route.query.mapId
       this.userId = this.$route.query.userId
-      axios.post('http://localhost:8080/bluefire3_war_exploded/Integererface/data_manage/getIndoorTrajectories', {
+      axios.post('http://112.74.189.126:8080/bluefire/Integererface/data_manage/getIndoorTrajectories', {
         mapId: this.mapId,
         userId: this.userId
       })
@@ -108,21 +112,32 @@ export default {
     },
     // 跳转到显示轨迹页面，并传递选择轨迹ID
     showTrack: function() {
-      this.$router.push({
-        path: '/dengyuankang/showTrack',
-        query: {
-          trajectoryId: this.send_radio
-        }
-      })
+      if (this.send_radio === '') {
+        this.$message({
+          message: '尚未选择用户轨迹',
+          type: 'warning'
+        })
+      } else {
+        this.$router.push({
+          path: '/dengyuankang/showTrack',
+          query: {
+            trajectoryId: this.send_radio
+          }
+        })
+      }
     },
     // 轨迹预处理(传递轨迹ID，得到处理后的数据)
     trackDeal: function() {
-      axios.post('http://localhost:8080/bluefire3_war_exploded/Integererface/pretreatment/correctIndoorTrajectory', {
+      axios.post('http://112.74.189.126:8080/bluefire/Integererface/pretreatment/correctIndoorTrajectory', {
         trajectoryId: this.send_radio
       })
         .then(
           response => {
             console.log('轨迹纠错成功')
+            this.$message({
+              message: '轨迹纠错成功',
+              type: 'success'
+            })
             this.afterCorrect = response.data
           },
           err => {
@@ -132,11 +147,16 @@ export default {
     },
     // 轨迹压缩(传递轨迹ID，得到处理后的数据)
     trackCondense: function() {
-      axios.post('http://localhost:8080/bluefire3_war_exploded/Integererface/pretreatment/compressIntdoorTrajectory', {
+      axios.post('http://112.74.189.126:8080/bluefire/Integererface/pretreatment/compressIntdoorTrajectory', {
         trajectoryId: this.send_radio
       })
         .then(
           response => {
+            console.log('轨迹压缩成功')
+            this.$message({
+              message: '轨迹压缩成功',
+              type: 'success'
+            })
             this.afterCondense = response.data
           },
           err => {

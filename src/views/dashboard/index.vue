@@ -1,15 +1,16 @@
 <template>
-  <div class="whole" id="container">
+  <div id="container" class="whole">
     <div class="top">
       <el-menu
         default-active="1"
-        @select="handleSelect">
+        @select="handleSelect"
+      >
         <el-menu-item index="1">
-          <i class="el-icon-location"></i>
+          <i class="el-icon-location" />
           <span slot="title">室内</span>
         </el-menu-item>
         <el-menu-item index="2">
-          <i class="el-icon-location"></i>
+          <i class="el-icon-location" />
           <span slot="title">室外</span>
         </el-menu-item>
       </el-menu>
@@ -24,75 +25,78 @@
           :disabled="disabled"
           placeholder="请选择地图"
           @focus="showIndoorMap()"
-          @change="map(selectedIndex)">
+          @change="map(selectedIndex)"
+        >
           <el-option
             v-for="(item,index) in maps"
             :key="item.mapID"
             :label="item.mapName"
-            :value="index">
-          </el-option>
+            :value="index"
+          />
         </el-select>
         <!-- 起止时间 这里的起止时间比较是自定义的 -->
-        <div class="datestyle" v-show="showdata">
+        <div v-show="showdata" class="datestyle">
           <el-date-picker
             ref="starttimeInput"
             v-model="starttimeValue"
             type="datetime"
             placeholder="开始时间"
-            align="right">
-          </el-date-picker>
+            align="right"
+          />
           <el-date-picker
             ref="endtimeInput"
             v-model="endtimeValue"
             type="datetime"
             placeholder="结束时间"
-            align="right">
-          </el-date-picker>
+            align="right"
+          />
         </div>
-        <div class="datestyle" v-show="!showdata">
+        <div v-show="!showdata" class="datestyle">
           <!-- <el-button type="primary" plain>显示轨迹</el-button> -->
           <el-autocomplete
+            v-model="namevalue"
             class="inline-input"
             size="default"
-            v-model="namevalue"
             :fetch-suggestions="querySearch"
             placeholder="请输入要查询的用户名"
-            @select="handleoutUserSelect">
+            @select="handleoutUserSelect"
+          >
             <i
+              slot="prefix"
               class="el-icon-search el-input__icon"
-              slot="prefix">
-            </i>
+            />
           </el-autocomplete>
           <el-autocomplete
+            v-model="idvalue"
             class="inline-input"
             size="default"
-            v-model="idvalue"
             :fetch-suggestions="queryoutSearch"
             placeholder="请输入轨迹id"
-            @select="handletrajectorySelect">
+            @select="handletrajectorySelect"
+          >
             <i
+              slot="prefix"
               class="el-icon-search el-input__icon"
-              slot="prefix">
-            </i>
+            />
           </el-autocomplete>
         </div>
       </div>
       <!-- 室内地图显示 -->
       <!-- v-show="!showOutmap"  -->
-      <!-- <div class="smallbtn">       
+      <!-- <div class="smallbtn">
       </div> -->
-      <el-badge class="smallbtn" v-show="!showOutmap">
-        <el-button icon="el-icon-view" @click="showdots"></el-button>
+      <el-badge v-show="!showOutmap" class="smallbtn">
+        <el-button icon="el-icon-view" @click="showdots" />
       </el-badge>
       <div class="map">
         <div
           v-show="showOutmap"
           id="myMap"
           style="width: 100%;height: 100%"
-        ></div>
+        />
         <!-- <svg class="img" style="width: 100%;height: 100%" viewBox="0 0 4167 2190"></svg> -->
         <!-- <svg class="img" style="width: 100%;height: 100%" viewBox="0 0 4167 4167"></svg> -->
-        <svg class="img" style="width: 100%;height: 100%" viewBox="0 0 4167 4167"></svg>
+        <svg id='mapCon' class="img" style="width: 100%;height: 100%" viewBox="0 0 4167 4167" />
       </div>
     </div>
     <!-- 页面的右部分 用户的选择与相似度比较 -->
@@ -112,32 +116,34 @@
           </i>
         </el-input> -->
         <el-autocomplete
+          v-model="selectVal"
           class="inline-input choosestyle user1"
           size="medium"
-          v-model="selectVal"
           :fetch-suggestions="querySearch"
           placeholder="用户1"
           :trigger-on-focus="false"
           @focus="showList(1)"
-          @select="handleUserSelect">
+          @select="handleUserSelect"
+        >
           <i
+            slot="suffix"
             class="el-icon-search el-input__icon"
-            slot="suffix">
-          </i>
+          />
         </el-autocomplete>
         <el-autocomplete
+          v-model="selectVal2"
           class="inline-input choosestyle user2"
           size="medium"
-          v-model="selectVal2"
           :fetch-suggestions="querySearch"
           placeholder="用户2"
           :trigger-on-focus="false"
           @focus="showList(2)"
-          @select="handleUserSelect">
+          @select="handleUserSelect"
+        >
           <i
+            slot="suffix"
             class="el-icon-search el-input__icon"
-            slot="suffix">
-          </i>
+          />
         </el-autocomplete>
       </div>
       <!-- 一开始没选中用户没有用户列表显示时 -->
@@ -145,29 +151,29 @@
         （请在上面先选择你要进行比较的两个用户）</div>
       <!-- 用户列表 -->
       <el-table
-        class="list-container"
+        v-show="isShow"
         ref="singleTable"
+        class="list-container"
         max-height="380"
         :data="userData"
         border
         highlight-current-row
         @row-click="handleRowClick"
-        v-show="isShow"
       >
         <el-table-column
           property="userID"
           label="用户编号"
           width="70"
-          align="center">
-        </el-table-column>
+          align="center"
+        />
         <el-table-column
           property="userName"
           label="用户名"
-          align="center">
-        </el-table-column>
+          align="center"
+        />
       </el-table>
       <!-- 确定按钮 -->
-      <el-button v-show="isShow" class="btn" @click="hideList" type="primary" plain>确定</el-button>
+      <el-button v-show="isShow" class="btn" type="primary" plain @click="hideList">确定</el-button>
       <!-- 用户相似度 -->
       <!-- <el-table
         class="list-container"
@@ -187,54 +193,56 @@
         </el-table-column>
       </el-table> -->
       <el-input
+        v-show="isShowSimi"
+        v-model="userSimilarity"
+        v-loading="loading"
         class="list-container"
         style="margin-bottom:20px;"
         :readonly="true"
-        v-model="userSimilarity"
-        v-loading="loading"
         :element-loading-text="loadingText"
         element-loading-spinner="el-icon-loading"
-        v-show="isShowSimi">
+      >
         <template slot="prepend">用户相似度：</template>
       </el-input>
       <!-- <el-input v-model="userSimilarity" :disabled="true" v-show="isShowSimi"></el-input> -->
       <!-- 相似度列表 -->
       <el-table
-        class="list-container"
+        v-show="isShowSimi"
         ref="singleTable2"
-        max-height="450"
         v-loading="loading"
+        class="list-container"
+        max-height="450"
         :element-loading-text="loadingText"
         element-loading-spinner="el-icon-loading"
         :data="similarityList"
         border
         highlight-current-row
         @row-click="showSame"
-        v-show="isShowSimi">
+      >
         <el-table-column
           type="index"
           label="编号"
           width="55"
-          align="center">
-        </el-table-column>
+          align="center"
+        />
         <el-table-column
           property="trajectoryAid"
           label="A轨迹id"
           width="55"
-          align="center">
-        </el-table-column>
+          align="center"
+        />
         <el-table-column
           property="trajectoryBid"
           label="B轨迹id"
           width="55"
-          align="center">
-        </el-table-column>
+          align="center"
+        />
         <el-table-column
           property="similarity"
           label="轨迹相似度"
           sortable
-          align="center">
-        </el-table-column>
+          align="center"
+        />
       </el-table>
     </div>
   </div>
@@ -275,18 +283,18 @@ export default {
       num: 0, // 回放时的轨迹点的索引
       timer: null, // 定时器名称
       track: null,
-      activeName: 'in',// 室内或者室外
+      activeName: 'in', // 室内或者室外
       disabled: false,
       showOutmap: false,
-      trackoutData:{}, // 存储室外轨迹数据的临时列表
-      trackDatas:[], // 存储总的数据
+      trackoutData: {}, // 存储室外轨迹数据的临时列表
+      trackDatas: [], // 存储总的数据
       times: 0,
-      x_test:80,
-      y_test:80,
-      points_list_2:[],
-      points_list_3:[],
-      now:"",
-      trajectoryId:0, //  记录室外地图轨迹id的选择
+      x_test: 80,
+      y_test: 80,
+      points_list_2: [],
+      points_list_3: [],
+      now: '',
+      trajectoryId: 0, //  记录室外地图轨迹id的选择
       nowpoints: [],
       markerArr: [],
       plPoints: [],
@@ -300,9 +308,6 @@ export default {
       showPath: false,
       userSimilarity: 0
     }
-  },
-  mounted() {
-    Message.closeAll()
   },
   computed: {
     // 将开始时间和结束时间组成一个总的，之后就可以两者同时监测
@@ -328,7 +333,7 @@ export default {
         if (this.selectedIndex === '' && this.activeName === 'in') {
           this.starttimeValue = null
           this.endtimeValue = null
-          this.errorMessage("请先选择地图，再进行时间段的选择")
+          this.errorMessage('请先选择地图，再进行时间段的选择')
         } else {
           this.startTime = time.starttimeValue
           this.endTime = time.endtimeValue
@@ -382,7 +387,7 @@ export default {
         svg.selectAll('g').remove()
         svg.selectAll('img').remove()
         // 重新绘制
-        this.showTrack(this.starttimeValue,this.endtimeValue)
+        this.showTrack(this.starttimeValue, this.endtimeValue)
       }
     }
     // inputValue: {
@@ -404,8 +409,11 @@ export default {
     //   }
     // }
   },
+  mounted() {
+    Message.closeAll()
+  },
   methods: {
-    ////////////////室内室外兼顾/////////////////////
+    // //////////////室内室外兼顾/////////////////////
     // 选择室内地图还是室外地图
     handleSelect(index) {
       Message.closeAll()
@@ -419,7 +427,7 @@ export default {
       this.selectVal = ''
       this.selectVal2 = ''
       console.log('清空数据')
-      if (index == 1) {
+      if (index === 1) {
         this.activeName = 'in' // 将标志设置为室内
         this.showOutmap = false // 去除室外地图
         this.disabled = false // 激活选择地图下拉框
@@ -427,7 +435,7 @@ export default {
         // this.starttimeValue = null // 将时间清空，因为室内必须选择地图之后，才能进行时间段的选择
         // this.endtimeValue = null
       } else {
-        this.mymap();
+        this.mymap()
         this.setMapEvent() // 设置地图事件
         this.addMapControl() // 向地图添加控件
         // this.showAlltrajectory() // 更新室外地图轨迹信息
@@ -455,73 +463,73 @@ export default {
           this.errorMessage('请先选择地图和时间段')
         }
       } else {
-          Message.closeAll()
-          this.isShow = true
-          this.isShowSimi = false
-          this.flag = flag
-          // this.showOutdoorUsers()
+        Message.closeAll()
+        this.isShow = true
+        this.isShowSimi = false
+        this.flag = flag
+        // this.showOutdoorUsers()
       }
     },
     // 根据输入内容提供对应的输入建议 查询并返回建议列表的数据
     querySearch(queryString, cb) {
-        var userData = this.userData;
-        let userdataList = [];
-        for(let i=0;i<this.userData.length;i++){
-          userdataList.push({'value':userData[i].userName,'id':userData[i].userID})
-        }
-        var results = queryString ? userdataList.filter(this.createFilter(queryString)) : userdataList;
-        // 调用 callback 返回建议列表的数据
-        cb(results)
-    },
-    createFilter(queryString) {
-        return (userdataList) => {
-          return (userdataList.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0);
-        };
-    },
-    queryoutSearch(queryString, cb) {
-      var trajectorys = this.trajectorys;
-      let trajectorysList = [];
-      for(let i=0;i<this.trajectorys.length;i++){
-        trajectorysList.push({'value':String(trajectorys[i].trajectoryId)})
+      var userData = this.userData
+      const userdataList = []
+      for (let i = 0; i < this.userData.length; i++) {
+        userdataList.push({ 'value': userData[i].userName, 'id': userData[i].userID })
       }
-      var results = queryString ? trajectorysList.filter(this.createFilter(queryString)) : trajectorysList;
+      var results = queryString ? userdataList.filter(this.createFilter(queryString)) : userdataList
+      // 调用 callback 返回建议列表的数据
       cb(results)
     },
-    handleoutUserSelect(item){
+    createFilter(queryString) {
+      return (userdataList) => {
+        return (userdataList.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0)
+      }
+    },
+    queryoutSearch(queryString, cb) {
+      var trajectorys = this.trajectorys
+      const trajectorysList = []
+      for (let i = 0; i < this.trajectorys.length; i++) {
+        trajectorysList.push({ 'value': String(trajectorys[i].trajectoryId) })
+      }
+      var results = queryString ? trajectorysList.filter(this.createFilter(queryString)) : trajectorysList
+      cb(results)
+    },
+    handleoutUserSelect(item) {
       console.log(item)
       // print(item.id)
       this.userid = item.id // 更新用户的id
-      let para = {
-        "userId": this.userid,
-        "startDate":"2018-3-5",
-        "endDate":"2018-3-6"
+      const para = {
+        'userId': this.userid,
+        'startDate': '2018-3-5',
+        'endDate': '2018-3-6'
       }
       var that = this
-      api.getOutdoorTrajectories(para).then(response=>{
-        console.log("接收成功")
+      api.getOutdoorTrajectories(para).then(response => {
+        console.log('接收成功')
         // console.log(response.data.content.list[1])
         this.trajectorys = response.data.content.list
       },
-      err=>{
+      err => {
         // console.log(err)
-        console.log("接收失败")
+        console.log('接收失败')
       })
     },
     handletrajectorySelect(item) {
       console.log(item)
       var that = this
       this.trajectoryId = parseInt(item.value)
-      setTimeout(function (){
+      setTimeout(function() {
         that.showouttrack('black')
       }, 1000)
       var loadingInstance = Loading.service({
-          lock: true,
-          text:'拼命绘制轨迹地图中...',
-          spinner: 'el-icon-loading',
-          background: 'rgba(0, 0, 0, 0.7)'
-      });
-      setTimeout(function (){
-        loadingInstance.close();
+        lock: true,
+        text: '拼命绘制轨迹地图中...',
+        spinner: 'el-icon-loading',
+        background: 'rgba(0, 0, 0, 0.7)'
+      })
+      setTimeout(function() {
+        loadingInstance.close()
       }, 1000)
     },
     handleUserSelect(item) {
@@ -542,17 +550,17 @@ export default {
       } else { // 室外地图
         var that = this
         this.trajectoryId = tid
-        setTimeout(function (){
+        setTimeout(function() {
           that.showouttrack(linecolor)
         }, 1000)
         const loadingInstance = Loading.service({
-            lock: true,
-            text: '拼命绘制轨迹地图中...',
-            spinner: 'el-icon-loading',
-            background: 'rgba(0, 0, 0, 0.7)'
-        });
-        setTimeout(function (){
-          loadingInstance.close();
+          lock: true,
+          text: '拼命绘制轨迹地图中...',
+          spinner: 'el-icon-loading',
+          background: 'rgba(0, 0, 0, 0.7)'
+        })
+        setTimeout(function() {
+          loadingInstance.close()
         }, 1000)
       }
     },
@@ -565,7 +573,7 @@ export default {
         if (this.activeName === 'in') {
           this.showIndoorSimilarity()
           // this.showOutdoorSimilarity()  // 当后台算法连接好接口以后偶，就可以转换成上面那一句
-        }else {
+        } else {
           this.showOutdoorSimilarity()
         }
       }
@@ -589,7 +597,7 @@ export default {
       }
       this.currentRow = row // 将当前行存储下来
       var para = {
-        userID : parseInt(row.userID)
+        userID: parseInt(row.userID)
       }
       // 判断是室内地图还是室外地图，然后进行用户地图绘制
       if (this.activeName === 'in') { // 室内地图
@@ -601,21 +609,21 @@ export default {
           data.forEach((item) => {
             that.trajectoryId = item.trajectoryId
           },
-          err=>{
+          err => {
             // console.log(err)
-            console.log("接收失败")
+            console.log('接收失败')
           })
-          setTimeout(function (){
+          setTimeout(function() {
             that.showouttrack(linecolor)
           }, 1000)
-          let loadingInstance = Loading.service({
-              lock: true,
-              text:'拼命绘制轨迹地图中...',
-              spinner: 'el-icon-loading',
-              background: 'rgba(0, 0, 0, 0.7)'
-          });
-          setTimeout(function (){
-            loadingInstance.close();
+          const loadingInstance = Loading.service({
+            lock: true,
+            text: '拼命绘制轨迹地图中...',
+            spinner: 'el-icon-loading',
+            background: 'rgba(0, 0, 0, 0.7)'
+          })
+          setTimeout(function() {
+            loadingInstance.close()
           }, 1000)
         })
       }
@@ -635,7 +643,7 @@ export default {
     },
     showSame(row) {
       // 如果界面中有图像，则要先清除
-      if (this.activeName == 'in') {
+      if (this.activeName === 'in') {
         var svg = d3.select('.app-main').select('svg')
         svg.selectAll('circle').remove()
         svg.selectAll('path').remove()
@@ -646,18 +654,18 @@ export default {
         this.showoutTrackSame(row)
       }
     },
-    ////////////////////室内////////////////////////////////
+    // //////////////////室内////////////////////////////////
     // 获取室内地图列表
     showIndoorMap() {
       // 获取室内地图列表
       if (this.activeName === 'in') {
         api.queryIndoorMap().then(response => {
           this.maps = response.data.content.list
-          console.log("获得地图列表的信息成功")
+          console.log('获得地图列表的信息成功')
         },
-        err=>{
+        err => {
           // console.log(err)
-          console.log("接收失败")
+          console.log('接收失败')
         })
       }
     },
@@ -697,7 +705,8 @@ export default {
       }
       // console.log(mapImg, selectedIndex)
       //  获得svg标签
-      var svg = d3.select('.app-main').select('svg')
+      // var svg = d3.select('.app-main').select('svg')
+      var svg = d3.select('#mapCon')
       var imgs = svg.selectAll('images' + selectedIndex)
       imgs.data([0])
         .enter()
@@ -713,28 +722,28 @@ export default {
     showIndoorUsers() {
       var data
       var that = this
-      let para = {
+      const para = {
         mapId: parseInt(this.mapid)
       }
       api.getIndoorUsers(para).then(response => {
         data = response.data.content.list
-        console.log("获得用户列表的信息")
+        console.log('获得用户列表的信息')
         if (data) {
           var datalist = []
           data.forEach(function(item) {
             var lists = { 'userID': '', 'userName': '' }
-            if (item){
+            if (item) {
               lists['userID'] = item['userId']
               lists['userName'] = item['userName']
               datalist.push(lists)
-            } 
+            }
           })
           that.userData = datalist
         }
       },
-      err=>{
+      err => {
         // console.log(err)
-        console.log("接收失败")
+        console.log('接收失败')
       })
     },
     // 显示室内轨迹相似度
@@ -742,12 +751,12 @@ export default {
       this.loading = true
       var data
       var that = this
-      let para = {
-        userAID : parseInt(this.userAid),
-        userBID : parseInt(this.userBid),
-        mapID : parseInt(this.mapid),
-        startDate : "2010-01-01",
-        endDate : "2019-01-01"
+      const para = {
+        userAID: parseInt(this.userAid),
+        userBID: parseInt(this.userBid),
+        mapID: parseInt(this.mapid),
+        startDate: '2010-01-01',
+        endDate: '2019-01-01'
       }
       console.log(para)
       api.getIndoorSimilarity(para).then(response => { // 获取室内用户相似度并更新相似度列表
@@ -755,7 +764,7 @@ export default {
         this.loading = false
         data = response.data.content.trajectory
         console.log(response.data.content)
-        console.log("获得室内相似度的信息")
+        console.log('获得室内相似度的信息')
         var dataitem = []
         data.forEach(function(item) {
           dataitem.push({
@@ -767,9 +776,9 @@ export default {
         that.userSimilarity = response.data.content.userSimilarity
         that.similarityList = dataitem
       },
-      err=>{
+      err => {
         // console.log(err)
-        console.log("接收失败")
+        console.log('接收失败')
       })
     },
     // 当点击相似度那一行的时候，要在图中显示出轨迹
@@ -783,34 +792,34 @@ export default {
       var data
       var that = this
       var link
-      let para = {
+      const para = {
         trajectoryID: parseInt(row.trajectoryAid)
       }
-      let parab = {
+      const parab = {
         trajectoryID: parseInt(row.trajectoryBid)
       }
       api.getIndoorTrajectoryDetail(para).then(response => {
         console.log(response.data.content.list)
         data = response.data.content.list
-        console.log("获得该轨迹的详细信息")
+        console.log('获得该轨迹的详细信息')
         // console.log(data)
-        this.showTrackdots(data,'blue')
+        this.showTrackdots(data, 'blue')
       })
       api.getIndoorTrajectoryDetail(parab).then(response => {
         data = response.data.content.list
-        console.log("获得该轨迹的详细信息")
+        console.log('获得该轨迹的详细信息')
         // console.log(data)
-        this.showTrackdots(data,'red')
+        this.showTrackdots(data, 'red')
       },
-      err=>{
+      err => {
         // console.log(err)
-        console.log("接收失败")
+        console.log('接收失败')
       })
     },
     // 显示室内该时间段用户轨迹点
     showdots() {
       if (this.showPath) {
-        this.showTrack(this.starttimeValue,this.endtimeValue)
+        this.showTrack(this.starttimeValue, this.endtimeValue)
       } else {
         // 添加
         var svg = d3.select('.app-main').select('svg')
@@ -821,7 +830,7 @@ export default {
       this.showPath = !this.showPath
     },
     // 显示室内单条轨迹
-    showTrackdots(indoorItem,color) {
+    showTrackdots(indoorItem, color) {
       // 添加轨迹
       var svg = d3.select('.app-main').select('svg')
       // var svg = d3.select('svg')
@@ -895,30 +904,30 @@ export default {
       var that = this
       console.log(this.userData)
       this.userData.forEach((item) => {
-        console.log("接收用户成功")
-        let para = {
-          userID : parseInt(item.userID),
-          mapID : parseInt(this.mapid)
+        console.log('接收用户成功')
+        const para = {
+          userID: parseInt(item.userID),
+          mapID: parseInt(this.mapid)
           // startDate : this.starttimeValue,
           // endDate : this.endtimeValue
         }
         api.getIndoorTrajectories(para).then(response => {
-          console.log("接收成功")
+          console.log('接收成功')
           data = response.data.content.list
           // console.log("获取用户的轨迹")
           // data = data[para.trajectoryID]
           data.forEach(function(item) {
             // console.log(item)
             // item = item.trajectoryID
-            let tid = {
-              trajectoryId : parseInt(item.trajectoryId)
+            const tid = {
+              trajectoryId: parseInt(item.trajectoryId)
             }
             // console.log(tid)
             // this.showIndoorTrajectoryDetail(item.trajectoryID)
             api.getIndoorTrajectoryDetail(tid).then(response => {
               item = response.data.content.list
               // item = data[tid.trajectoryID]
-              console.log("获得该轨迹的详细信息")
+              console.log('获得该轨迹的详细信息')
               var start = item[0]['timeStamp']
               // console.log(start)
               var end = item[item.length - 1]['timeStamp']
@@ -927,14 +936,14 @@ export default {
               getTime = new Date(end)
               end = getTime.toLocaleString()
               if (start >= new Date(starttime).toLocaleString() && end <= new Date(endtime).toLocaleString()) {
-                console.log("绘制轨迹")
+                console.log('绘制轨迹')
                 that.trackDatas = item
-                that.showTrackdots(item,"black")
+                that.showTrackdots(item, 'black')
               }
             },
-            err=>{
+            err => {
               // console.log(err)
-              console.log("接收失败")
+              console.log('接收失败')
             })
           })
         })
@@ -947,16 +956,16 @@ export default {
       var that = this
       if (flag === 1) {
         para = {
-          userID : parseInt(this.userAid),
-          mapID : parseInt(this.mapid)
+          userID: parseInt(this.userAid),
+          mapID: parseInt(this.mapid)
           // startDate : "2008-09-03",
           // endDate : "2008-09-03"
         }
         linecolor = 'blue'
       } else {
         para = {
-          userID : parseInt(this.userBid),
-          mapID : parseInt(this.mapid)
+          userID: parseInt(this.userBid),
+          mapID: parseInt(this.mapid)
           // startDate : "2008-09-03",
           // endDate : "2008-09-03"
         }
@@ -964,58 +973,58 @@ export default {
       }
       // 对轨迹进行绘制
       api.getIndoorTrajectories(para).then(response => {
-        let data = response.data.content.list
+        const data = response.data.content.list
         data.forEach(function(item) {
-          let tid = {
-            trajectoryId : parseInt(item.trajectoryId)
+          const tid = {
+            trajectoryId: parseInt(item.trajectoryId)
           }
           api.getIndoorTrajectoryDetail(tid).then(response => {
-              item = response.data.content.list
-              that.showTrackdots(item,linecolor)
+            item = response.data.content.list
+            that.showTrackdots(item, linecolor)
           },
-          err=>{
+          err => {
             // console.log(err)
-            console.log("接收失败")
+            console.log('接收失败')
           })
         })
       },
-      err=>{
+      err => {
         // console.log(err)
-        console.log("接收失败")
+        console.log('接收失败')
       })
     },
-    ////////////////////室外////////////////////////////////
+    // //////////////////室外////////////////////////////////
     // 百度地图 室外地图的创建引入
     mymap() {
-      var map = new BMap.Map("myMap"); //在百度地图容器中创建一个地图
-      var point = new BMap.Point(116.395645, 39.937953); //定义一个中心点坐标
-      map.centerAndZoom(point, 12); //设定地图的中心点和坐标并将地图显示在地图容器中
-      window.map = map; //将map变量存储在全局
+      var map = new BMap.Map('myMap') // 在百度地图容器中创建一个地图
+      var point = new BMap.Point(116.395645, 39.937953) // 定义一个中心点坐标
+      map.centerAndZoom(point, 12) // 设定地图的中心点和坐标并将地图显示在地图容器中
+      window.map = map // 将map变量存储在全局
     },
     // 设置一些地图默认事件
     setMapEvent() {
-      map.enableDragging(); //启用地图拖拽事件，默认启用(可不写)
-      map.enableScrollWheelZoom(); //启用地图滚轮放大缩小
-      map.enableDoubleClickZoom(); //启用鼠标双击放大，默认启用(可不写)
-      map.enableKeyboard(); //启用键盘上下左右键移动地图
+      map.enableDragging() // 启用地图拖拽事件，默认启用(可不写)
+      map.enableScrollWheelZoom() // 启用地图滚轮放大缩小
+      map.enableDoubleClickZoom() // 启用鼠标双击放大，默认启用(可不写)
+      map.enableKeyboard() // 启用键盘上下左右键移动地图
     },
     // 添加控件
     addMapControl() {
-      //向地图中添加缩放控件
+      // 向地图中添加缩放控件
       var ctrl_nav = new BMap.NavigationControl({
         anchor: BMAP_ANCHOR_TOP_LEFT,
         type: BMAP_NAVIGATION_CONTROL_LARGE
-      });
-      map.addControl(ctrl_nav);
-      //向地图中添加缩略图控件
+      })
+      map.addControl(ctrl_nav)
+      // 向地图中添加缩略图控件
       var ctrl_ove = new BMap.OverviewMapControl({
         anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
         isOpen: 1
-      });
-      map.addControl(ctrl_ove);
-      //向地图中添加比例尺控件
-      var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
-      map.addControl(ctrl_sca);
+      })
+      map.addControl(ctrl_ove)
+      // 向地图中添加比例尺控件
+      var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT })
+      map.addControl(ctrl_sca)
     },
     // 显示室外用户列表
     showOutdoorUsers() {
@@ -1023,41 +1032,41 @@ export default {
       var that = this
       api.getOutdoorUsers().then(response => {
         data = response.data.content.list
-        console.log("获得室外用户列表的信息")
+        console.log('获得室外用户列表的信息')
         console.log(data)
         if (data) {
           var datalist = []
           data.forEach(function(item) {
             var lists = { 'userID': '', 'userName': '' }
-            if (item){
+            if (item) {
               lists['userID'] = item['userId']
               lists['userName'] = item['userName']
               datalist.push(lists)
-            } 
+            }
           })
           that.userData = datalist
         }
       },
-      err=>{
+      err => {
         // console.log(err)
-        console.log("接收失败")
+        console.log('接收失败')
       })
     },
     // 显示室外轨迹相似度
     showOutdoorSimilarity() {
       var data
       var that = this
-      let para = {
-        userAID : parseInt(this.userAid),
-        userBID : parseInt(this.userBid),
-        startDate : "2008-07-04",
-        endDate : "2009-09-04"
+      const para = {
+        userAID: parseInt(this.userAid),
+        userBID: parseInt(this.userBid),
+        startDate: '2008-07-04',
+        endDate: '2009-09-04'
       }
       console.log(para)
       api.getOutdoorSimilarity(para).then(response => { // 获取室内用户相似度
         // console.log(response.data.content)
         data = response.data.content.trajectory
-        console.log("获得相似度的信息")
+        console.log('获得相似度的信息')
         // console.log(data)
         var dataitem = []
         data.forEach(function(item) {
@@ -1069,9 +1078,9 @@ export default {
         })
         that.similarityList = dataitem
       },
-      err=>{
+      err => {
         // console.log(err)
-        console.log("接收失败")
+        console.log('接收失败')
       })
     },
     // 当点击相似度那一行的时候，要在图中显示出轨迹
@@ -1080,31 +1089,31 @@ export default {
       var that = this
       var link
       this.trajectoryId = row.trajectoryAid
-      setTimeout(function (){
-        that.showouttrack("red")
+      setTimeout(function() {
+        that.showouttrack('red')
       }, 1000)
       var loadingInstance = Loading.service({
-          lock: true,
-          text:'拼命绘制轨迹地图中...',
-          spinner: 'el-icon-loading',
-          background: 'rgba(0, 0, 0, 0.7)'
-      });
-      setTimeout(function (){
-        loadingInstance.close();
+        lock: true,
+        text: '拼命绘制轨迹地图中...',
+        spinner: 'el-icon-loading',
+        background: 'rgba(0, 0, 0, 0.7)'
+      })
+      setTimeout(function() {
+        loadingInstance.close()
       }, 1000)
       this.trajectoryId = row.trajectoryBid
       // this.trajectoryId = 175
-      setTimeout(function (){
-        that.showouttrack("red")
+      setTimeout(function() {
+        that.showouttrack('red')
       }, 1000)
       var loadingInstance = Loading.service({
-          lock: true,
-          text:'拼命绘制轨迹地图中...',
-          spinner: 'el-icon-loading',
-          background: 'rgba(0, 0, 0, 0.7)'
-      });
-      setTimeout(function (){
-        loadingInstance.close();
+        lock: true,
+        text: '拼命绘制轨迹地图中...',
+        spinner: 'el-icon-loading',
+        background: 'rgba(0, 0, 0, 0.7)'
+      })
+      setTimeout(function() {
+        loadingInstance.close()
       }, 1000)
       // let para = {
       //   "trajectoryID": parseInt(row.trajectoryAid)
@@ -1115,7 +1124,7 @@ export default {
       // api.getOutdoorTrajectoryDetail(para).then(response => {
       //     console.log("接收成功")
       //     data = response.data.content.list
-      //     this.trajectoryId = data.trajectoryId 
+      //     this.trajectoryId = data.trajectoryId
       //     that.showouttrack("blue");
       //     // that.showoutTrackdots(item,linecolor)
       // })
@@ -1133,14 +1142,14 @@ export default {
       var that = this
       if (flag === 1) {
         para = {
-          userID : parseInt(this.userAid)
+          userID: parseInt(this.userAid)
           // startDate : this.starttimeValue,
           // endDate : this.endtimeValue
         }
         linecolor = 'blue'
       } else {
         para = {
-          userID : parseInt(this.userBid)
+          userID: parseInt(this.userBid)
           // startDate : this.starttimeValue,
           // endDate : this.endtimeValue
         }
@@ -1148,55 +1157,55 @@ export default {
       }
       // 对轨迹进行绘制
       api.getOutdoorTrajectories(para).then(response => {
-        let data = response.data.content.list
+        const data = response.data.content.list
         data.forEach(function(item) {
-          let tid = {
-            trajectoryId : parseInt(item.trajectoryId)
+          const tid = {
+            trajectoryId: parseInt(item.trajectoryId)
           }
           api.getOutdoorTrajectoryDetail(tid).then(response => {
-              item = response.data.content.list
-              that.showouttrack(linecolor);
-              // that.showoutTrackdots(item,linecolor)
+            item = response.data.content.list
+            that.showouttrack(linecolor)
+            // that.showoutTrackdots(item,linecolor)
           })
         })
       })
     },
     // 显示室外轨迹
     showouttrack(linecolor) {
-      this.mymap(); //创建地图
-      this.setMapEvent(); //设置地图事件
-      this.addMapControl(); //向地图添加控件
-      this.addPolyline(linecolor);
+      this.mymap() // 创建地图
+      this.setMapEvent() // 设置地图事件
+      this.addMapControl() // 向地图添加控件
+      this.addPolyline(linecolor)
     },
     addPolyline(linecolor) {
       for (var i = 0; i < this.plPoints.length; i++) {
-        var json = this.plPoints[i];
-        var points = [];
+        var json = this.plPoints[i]
+        var points = []
         for (var j = 0; j < json.points.length; j++) {
-          var p1 = json.points[j].split("|")[0];
-          var p2 = json.points[j].split("|")[1];
-          var point = new BMap.Point(p1, p2);
-          map.centerAndZoom(point, 16);
-          points.push(new BMap.Point(p1, p2));
+          var p1 = json.points[j].split('|')[0]
+          var p2 = json.points[j].split('|')[1]
+          var point = new BMap.Point(p1, p2)
+          map.centerAndZoom(point, 16)
+          points.push(new BMap.Point(p1, p2))
         }
         var line = new BMap.Polyline(points, {
           strokeStyle: json.style,
           strokeWeight: json.weight,
           strokeColor: linecolor,
           strokeOpacity: json.opacity
-        });
-        map.addOverlay(line);
+        })
+        map.addOverlay(line)
       }
     },
-    showAlltrajectory(){
-      let para = {
-        "userId": 1,
-        "startDate":"2018-3-5",
-        "endDate":"2018-3-6"
+    showAlltrajectory() {
+      const para = {
+        'userId': 1,
+        'startDate': '2018-3-5',
+        'endDate': '2018-3-6'
       }
       var that = this
-      api.getOutdoorTrajectories(para).then(response=>{
-        console.log("接收成功")
+      api.getOutdoorTrajectories(para).then(response => {
+        console.log('接收成功')
         // console.log(response.data.content.list[1])
         var data = response.data.content.list
         data.forEach((item) => {
@@ -1204,70 +1213,70 @@ export default {
           that.trajectoryId = item.trajectoryId
         })
       },
-      err=>{
-        console.log("接收失败")
+      err => {
+        console.log('接收失败')
       })
     },
-    hello(){
+    hello() {
       console.log(this.trajectoryId)
-      //获取轨迹信息
-      let para = {
-        "trajectoryID": this.trajectoryId
+      // 获取轨迹信息
+      const para = {
+        'trajectoryID': this.trajectoryId
       }
       // console.log(para)
-      console.log("开始接收")
-      api.getOutdoorTrajectoryDetail(para).then(response=>{
-        console.log("接收成功")
+      console.log('开始接收')
+      api.getOutdoorTrajectoryDetail(para).then(response => {
+        console.log('接收成功')
         // console.log(response.data.content.list[1])
-        var number1=0
+        var number1 = 0
         this.trackoutData = response.data.content.list
         // this.trackoutDatas.append(this.trackoutData)
-        var i=0
-        for(i in this.trackoutData){
-          this.x_2=this.trackoutData[i]["latitude"]
-          this.y_2=this.trackoutData[i]["longitude"]
-          this.solepoint=this.y_2+"|"+this.x_2,
+        var i = 0
+        for (i in this.trackoutData) {
+          this.x_2 = this.trackoutData[i]['latitude']
+          this.y_2 = this.trackoutData[i]['longitude']
+          this.solepoint = this.y_2 + '|' + this.x_2,
           this.points_list_2.push(this.solepoint)
         }
-        for(i in this.trackoutData){
-          this.x_2=this.trackoutData[i]["latitude"]
-          this.y_2=this.trackoutData[i]["longitude"]
-          this.solepoint=this.y_2+"|"+this.x_2,
+        for (i in this.trackoutData) {
+          this.x_2 = this.trackoutData[i]['latitude']
+          this.y_2 = this.trackoutData[i]['longitude']
+          this.solepoint = this.y_2 + '|' + this.x_2,
           this.points_list_3.push(
             {
-          title: null,
-          content: null,
-          point:this.solepoint,
-          isOpen: 0,
-          icon: { w: 100, h: 21, l: 0, t: 0, x: 6, lb: 5 }
-        }
+              title: null,
+              content: null,
+              point: this.solepoint,
+              isOpen: 0,
+              icon: { w: 100, h: 21, l: 0, t: 0, x: 6, lb: 5 }
+            }
           )
         }
-        this.markerArr=this.points_list_3
-        this.plPoints=[
-        {
-          style: "solid",
-          weight: 4,
-          color: "#f00",
-          opacity: 0.6,
-          points: this.points_list_2
-        }
-      ]
+        this.markerArr = this.points_list_3
+        this.plPoints = [
+          {
+            style: 'solid',
+            weight: 4,
+            color: '#f00',
+            opacity: 0.6,
+            points: this.points_list_2
+          }
+        ]
 
-        this.x_1=((this.trackoutData)[0]["latitude"])
-        this.y_1=((this.trackoutData)[0]["longitude"])
-        this.nowpoints[0]=
+        this.x_1 = ((this.trackoutData)[0]['latitude'])
+        this.y_1 = ((this.trackoutData)[0]['longitude'])
+        this.nowpoints[0] =
         {
           title: null,
           content: null,
-          point:this.y_1+"|"+this.x_1,
+          point: this.y_1 + '|' + this.x_1,
           isOpen: 0,
           icon: { w: 100, h: 21, l: 0, t: 0, x: 6, lb: 5 }
         }
       },
-      err=>{
+      err => {
         // console.log(err)
-        console.log("接收失败")
+        console.log('接收失败')
       })
     }
   }

@@ -1,8 +1,8 @@
 <template>
   <div class="dashboard-container">
-    <el-button style="margin-left: 10px;margin-top: 10px" @click="showtrack" type="primary" plain>轨迹处理</el-button>
-    <el-button style="margin-left: 10px;margin-top: 10px" @click="showplayback" type="primary" plain>轨迹回放</el-button>
-    <el-button style="margin-left: 10px;margin-top: 10px" @click="showpoint" type="primary" plain>实时定位</el-button>
+    <!--<el-button style="margin-left: 10px;margin-top: 10px" @click="showtrack" type="primary" plain>轨迹处理</el-button>-->
+    <el-button style="margin-left: 10px;margin-top: 10px" type="primary" plain @click="showplayback">轨迹回放</el-button>
+    <!--<el-button style="margin-left: 10px;margin-top: 10px" type="primary" plain @click="showpoint">实时定位</el-button>-->
     <div id="myMap" />
   </div>
 </template>
@@ -10,6 +10,8 @@
 <script>
 import { mapGetters } from 'vuex'
 import axios from 'axios'
+
+var map
 
 export default {
   name: 'Dashboard',
@@ -51,13 +53,13 @@ export default {
           for (i in this.trackData) {
             this.x_2 = this.trackData[i]['latitude']
             this.y_2 = this.trackData[i]['longitude']
-            this.solepoint = this.y_2 + '|' + this.x_2,
+            this.solepoint = this.y_2 + '|' + this.x_2
             this.points_list_2.push(this.solepoint)
           }
           for (i in this.trackData) {
             this.x_2 = this.trackData[i]['latitude']
             this.y_2 = this.trackData[i]['longitude']
-            this.solepoint = this.y_2 + '|' + this.x_2,
+            this.solepoint = this.y_2 + '|' + this.x_2
             this.points_list_3.push(
               {
                 title: null,
@@ -91,7 +93,7 @@ export default {
         }
         },
         err => {
-          conslog.log('接收失败')
+          console.log('接收失败')
         })
     },
 
@@ -108,14 +110,14 @@ export default {
       this.nowpoint()
     },
     showplayback() {
-      this.times = 0,
+      this.times = 0
       this.mymap() // 创建地图
       this.setMapEvent() // 设置地图事件
       this.addMapControl() // 向地图添加控件
       this.playtrack()
     },
     mymap() {
-      var map = new BMap.Map('myMap') // 在百度地图容器中创建一个地图
+      map = new BMap.Map('myMap') // 在百度地图容器中创建一个地图
       var point = new BMap.Point(116.395645, 39.937953) // 定义一个中心点坐标
       map.centerAndZoom(point, 12) // 设定地图的中心点和坐标并将地图显示在地图容器中
       window.map = map // 将map变量存储在全局

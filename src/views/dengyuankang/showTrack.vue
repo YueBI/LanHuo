@@ -1,10 +1,10 @@
 <template>
   <div class="dashboard-container">
-    <svg id="mapCon" style="width:780; height:400;" viewBox="0 0 4167 2190" /><br>
-    <el-button @click.native="myTrack">显示轨迹</el-button>
-    <el-button @click.native="start">播放轨迹</el-button>
-    <el-button @click.native="pause">暂停</el-button>
-    <el-button @click.native="reset">重置</el-button>
+    <svg id="mapCon" style="width:780px; height:400px;" viewBox="0 0 4167 2190" /><br>
+    <el-button type="primary" plain @click.native="myTrack">显示轨迹</el-button>
+    <el-button type="primary" plain @click.native="start">播放轨迹</el-button>
+    <el-button type="primary" plain @click.native="pause">暂停</el-button>
+    <el-button type="primary" plain @click.native="reset">重置</el-button>
   </div>
 </template>
 
@@ -55,7 +55,7 @@ export default {
           this.trackData = response.data.content.list
         },
         err => {
-          conslog.log('接收失败')
+          console.log('接收失败')
         })
       // 获得svg标签
       var svg = d3.select('#mapCon')

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div style="margin-top: 20px;margin-left: 15px">
-      选择查询时间:
+      <!--选择查询时间:
       <el-time-select
         v-model="startTime"
         placeholder="起始时间"
@@ -12,7 +12,7 @@
         placeholder="结束时间"
         :picker-options="{start: '08:30', step: '00:15', end: '18:30', minTime: startTime}"
         @change="findTrackList"
-      />
+      />-->
         <el-button type="primary" plain @click="passTrack">显示路线轨迹</el-button>
     </div>
     <div class="dashboard-container">

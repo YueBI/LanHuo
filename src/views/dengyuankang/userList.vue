@@ -4,18 +4,29 @@
     <el-select v-model="value" placeholder="请选择" @change="chooseMap">
       <el-option v-for="item in mapTable" :key="item.value" :label="item.label" :value="item.value" />
     </el-select>
-    <el-button @click="findUserList">查询</el-button>
-    <el-table ref="singleTable" :data="tableData" border style="width: 100%" @row-click="showRow">
+    <el-button type="primary" plain @click="findUserList">查询用户</el-button>
+    <el-table
+      ref="singleTable"
+      :data="tableData"
+      border
+      style="width: 100%;margin-top: 10px"
+      @row-click="showRow"
+      max-height="400"
+    >
       <el-table-column label="选择" width="70" header-align="center" align="center">
-        <template scope="scope">
+        <template slot-scope="scope">
           <el-radio v-model="radio" class="radio" :label="scope.$index">&nbsp;</el-radio>
         </template>
       </el-table-column>
       <el-table-column prop="userId" label="用户ID" width="180" />
       <el-table-column prop="userName" label="用户姓名" width="180" />
       <el-table-column prop="userAnalysisId" label="用户信息" />
+      <el-table-column>
+          <template slot="header">
+              <el-button type="primary" plain @click="toTrackList">查询轨迹列表</el-button>
+          </template>
+      </el-table-column>
     </el-table>
-    <el-button @click="toTrackList">查询轨迹列表</el-button>
   </div>
 </template>
 

@@ -62,7 +62,7 @@ export const constantRoutes = [
       path: 'index',
       name: 'Dashboard',
       component: () => import('@/views/wenyu/trackList'),
-      meta: { title: '轨迹展示', icon: 'dashboard' }
+      meta: { title: '室外轨迹', icon: 'dashboard' }
     },
     {
       path: 'showTrack',
@@ -79,7 +79,7 @@ export const constantRoutes = [
       hidden: true
     }]
   },
-  {
+  /* {
     path: '/yuruijie',
     component: Layout,
     children: [
@@ -90,29 +90,30 @@ export const constantRoutes = [
         meta: { title: '于瑞杰', icon: 'dashboard' }
       }
     ]
-  },
+  },*/
   {
     path: '/dengyuankang',
     component: Layout,
     redirect: '/dengyuankang',
-    meta: { title: '邓渊康', icon: 'dashboard' },
     children: [{
       path: 'trackList',
       name: 'Dashboard',
       component: () => import('@/views/dengyuankang/trackList'),
-      meta: { title: 'trackList', icon: 'dashboard' }
+      meta: { title: 'trackList', icon: 'dashboard' },
+      hidden: true
     },
     {
       path: 'showTrack',
       name: 'Dashboard',
       component: () => import('@/views/dengyuankang/showTrack'),
-      meta: { title: 'showTrack', icon: 'dashboard' }
+      meta: { title: 'showTrack', icon: 'dashboard' },
+      hidden: true
     },
     {
       path: 'useList',
       name: 'Dashboard',
       component: () => import('@/views/dengyuankang/userList'),
-      meta: { title: 'userList', icon: 'dashboard' }
+      meta: { title: '室内轨迹', icon: 'dashboard' }
     }]
   },
   {
